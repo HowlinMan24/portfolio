@@ -12,7 +12,7 @@ const sorted = [...projects].sort(
 );
 
 const categoryGradients: Record<string, string> = {
-  Web:          "from-blue-900/80 to-indigo-900/60",
+  Web:          "from-blue-900/80 to-sky-900/60",
   AI:           "from-violet-900/80 to-purple-900/60",
   ML:           "from-emerald-900/80 to-teal-900/60",
   Data:         "from-amber-900/80 to-orange-900/60",
@@ -140,7 +140,7 @@ export default function Projects() {
                 aria-pressed={on}
                 className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-all duration-200 ${
                   on
-                    ? "bg-indigo-500 border-indigo-500 text-white"
+                    ? "bg-sky-500 border-sky-500 text-white"
                     : "border-zinc-700 text-zinc-500 hover:border-zinc-500 hover:text-zinc-200 bg-transparent"
                 }`}
               >

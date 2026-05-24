@@ -26,7 +26,7 @@ export default function Education() {
           transition={{ duration: 0.55 }}
           className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-6 mb-6"
         >
-          <p className="text-xs font-bold uppercase tracking-[0.15em] text-indigo-400 mb-2">
+          <p className="text-xs font-bold uppercase tracking-[0.15em] text-sky-400 mb-2">
             B.Sc. Software Engineering &amp; Information Systems
           </p>
           <h3 className="font-display text-xl font-semibold text-white mb-1">
@@ -41,7 +41,7 @@ export default function Education() {
             {inProgress.map((c) => (
               <span
                 key={c}
-                className="rounded-full border border-indigo-500/25 bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-300"
+                className="rounded-full border border-sky-500/25 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300"
               >
                 {c}
               </span>

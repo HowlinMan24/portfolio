@@ -46,7 +46,7 @@ export default function Navbar() {
       {/* Scroll progress bar */}
       <div
         aria-hidden
-        className="fixed top-0 left-0 z-[60] h-0.5 bg-indigo-500 transition-all duration-75"
+        className="fixed top-0 left-0 z-[60] h-0.5 bg-sky-500 transition-all duration-75"
         style={{ width: `${progress}%` }}
       />
 
@@ -58,7 +58,7 @@ export default function Navbar() {
         }`}
       >
         <nav className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4" aria-label="Main navigation">
-          <a href="#hero" className="font-display text-sm font-bold tracking-tight text-indigo-400 hover:text-indigo-300 transition-colors">
+          <a href="#hero" className="font-display text-sm font-bold tracking-tight text-sky-400 hover:text-sky-300 transition-colors">
             HM
           </a>
 
@@ -70,12 +70,12 @@ export default function Navbar() {
                   href={l.href}
                   className={`relative px-3 py-1.5 rounded-md transition-colors ${
                     active === l.href
-                      ? "text-indigo-400"
+                      ? "text-sky-400"
                       : "text-zinc-400 hover:text-zinc-100"
                   }`}
                 >
                   {active === l.href && (
-                    <span className="absolute inset-0 rounded-md bg-indigo-500/10" />
+                    <span className="absolute inset-0 rounded-md bg-sky-500/10" />
                   )}
                   {l.label}
                 </a>
@@ -115,7 +115,7 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                     className={`block px-3 py-2 rounded-md transition-colors ${
                       active === l.href
-                        ? "text-indigo-400 bg-indigo-500/10"
+                        ? "text-sky-400 bg-sky-500/10"
                         : "text-zinc-400 hover:text-zinc-100"
                     }`}
                   >

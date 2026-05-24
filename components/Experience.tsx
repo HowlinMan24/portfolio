@@ -6,70 +6,61 @@ import SectionHeader from "./SectionHeader";
 
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      className="py-28 px-6 relative"
-      style={{
-        background:
-          "linear-gradient(180deg, transparent 0%, rgba(99,102,241,0.03) 50%, transparent 100%)",
-      }}
-    >
-      <div className="absolute inset-0 border-y border-zinc-800/50 pointer-events-none" />
-      <div className="mx-auto max-w-3xl">
-        <SectionHeader eyebrow="02 — Experience" title="Where I've worked" />
+    <section id="experience" className="py-28 px-6 md:px-12 relative">
+      <div className="absolute inset-0 border-y border-zinc-800/40 pointer-events-none" />
+      <div className="mx-auto max-w-4xl">
+        <SectionHeader eyebrow="Experience" title="Where I've worked" />
 
-        {/* Timeline */}
-        <ol className="relative space-y-12">
-          {/* Vertical gradient rail */}
-          <div
-            aria-hidden
-            className="absolute left-3 top-2 bottom-0 w-px"
-            style={{
-              background:
-                "linear-gradient(to bottom, #6366f1 0%, rgba(99,102,241,0.2) 80%, transparent 100%)",
-            }}
-          />
-
+        <div className="space-y-5">
           {experience.map((job, i) => (
-            <motion.li
+            <motion.div
               key={i}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.55, delay: i * 0.07 }}
-              className="relative pl-10 group"
+              className="group relative rounded-2xl border border-zinc-800/80 bg-zinc-900/50 p-6 hover:border-sky-500/25 hover:bg-zinc-900 transition-all duration-300 overflow-hidden"
             >
-              {/* Dot — w-6 h-6 centred on the rail at left-3 (12px).
-                  left-0 = 0px from li. dot width = 24px, so centre = 12px.
-                  Rail is at left-3 = 12px ✓ */}
-              <span className="absolute left-0 top-1.5 flex h-6 w-6 items-center justify-center">
-                <span className="h-3 w-3 rounded-full bg-indigo-500 ring-4 ring-indigo-500/20 group-hover:ring-indigo-500/40 group-hover:bg-indigo-400 transition-all duration-300" />
-              </span>
+              {/* Accent line */}
+              <div className="absolute left-0 top-0 bottom-0 w-0.5 rounded-full bg-gradient-to-b from-sky-500/80 via-sky-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="rounded-xl border border-zinc-800/80 bg-zinc-900/60 p-5 hover:border-indigo-500/30 hover:bg-zinc-900 transition-all duration-300">
-                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1">
-                  <h3 className="font-display text-base font-semibold text-white">
-                    {job.role}
-                  </h3>
-                  <span className="text-sm font-medium text-indigo-400">
-                    {job.company}
-                  </span>
+              {/* Header row */}
+              <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+                <div>
+                  <div className="flex items-center gap-3 flex-wrap mb-1">
+                    <h3 className="font-display text-lg font-bold text-white">{job.company}</h3>
+                    <span className="rounded-full bg-sky-500/10 border border-sky-500/20 px-2.5 py-0.5 text-xs font-semibold text-sky-300">
+                      {job.role}
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-500">{job.location}</p>
                 </div>
-                <p className="text-xs text-zinc-500 mb-4">
-                  {job.period} · {job.location}
-                </p>
-                <ul className="space-y-2 text-sm text-zinc-400">
-                  {job.bullets.map((b, j) => (
-                    <li key={j} className="flex gap-2.5">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-500/60" />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
+                <span className="text-xs font-medium text-zinc-500 bg-zinc-800 rounded-full px-3 py-1 shrink-0">
+                  {job.period}
+                </span>
               </div>
-            </motion.li>
+
+              {/* Bullets */}
+              <ul className="space-y-2 mb-5">
+                {job.bullets.map((b, j) => (
+                  <li key={j} className="flex gap-2.5 text-sm text-zinc-400 leading-relaxed">
+                    <span className="mt-2 w-1 h-1 rounded-full bg-sky-500/60 shrink-0" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Tech tags */}
+              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-zinc-800/60">
+                {job.tech.map((t) => (
+                  <span key={t} className="rounded-md bg-zinc-800/80 px-2.5 py-1 text-[11px] font-medium text-zinc-400 hover:text-sky-300 hover:bg-zinc-800 transition-colors">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
           ))}
-        </ol>
+        </div>
       </div>
     </section>
   );

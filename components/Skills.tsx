@@ -20,14 +20,14 @@ export default function Skills() {
               transition={{ duration: 0.5, delay: i * 0.06 }}
               className="flex flex-col sm:flex-row sm:items-start gap-6 py-6 group"
             >
-              <p className="w-32 shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-400 pt-1">
+              <p className="w-32 shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-sky-400 pt-1">
                 {group.label}
               </p>
               <div className="flex flex-wrap gap-2 flex-1">
                 {group.items.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-md border border-zinc-800 bg-zinc-900/60 px-3 py-1.5 text-xs font-medium text-zinc-300 hover:border-indigo-500/40 hover:text-indigo-300 hover:bg-indigo-500/5 transition-all duration-200"
+                    className="rounded-md border border-zinc-800 bg-zinc-900/60 px-3 py-1.5 text-xs font-medium text-zinc-300 hover:border-sky-500/40 hover:text-sky-300 hover:bg-sky-500/5 transition-all duration-200"
                   >
                     {skill}
                   </span>

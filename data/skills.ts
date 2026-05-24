@@ -5,15 +5,14 @@ export interface SkillGroup {
 
 export const skillGroups: SkillGroup[] = [
   {
-    label: "Programming",
-    items: ["Java", "Python", "C#", "JavaScript", "TypeScript", "SQL", "Shell"],
+    label: "Languages",
+    items: ["Python", "TypeScript", "JavaScript", "Java", "C#", "C/C++", "SQL", "PHP", "Bash/Shell"],
   },
   {
-    label: "Web",
+    label: "Web & APIs",
     items: [
-      "Angular", "Node.js", ".NET", "Spring", "NestJS",
-      "HTML5", "CSS3", "Tailwind", "REST APIs", "WebSockets",
-      "Nginx", "Apache",
+      "Angular", "NestJS", "Node.js", ".NET", "Spring Boot",
+      "HTML5", "CSS3", "Tailwind CSS", "REST APIs", "WebSockets", "Nginx",
     ],
   },
   {
@@ -23,23 +22,24 @@ export const skillGroups: SkillGroup[] = [
   {
     label: "Data & ML",
     items: [
-      "Spark", "Flink", "PySpark", "Big Data",
-      "scikit-learn", "Deep Learning", "EDA", "Data Mining",
-      "ETL", "MLOps", "Databricks",
+      "PySpark", "Apache Spark", "Apache Flink", "Kafka",
+      "scikit-learn", "Pandas", "Matplotlib", "Seaborn",
+      "Deep Learning", "Data Mining", "ETL", "MLOps", "Databricks",
+      "Statistics", "Data Visualization", "Bioinformatics",
     ],
   },
   {
-    label: "DevOps & Cloud",
+    label: "Cloud & DevOps",
     items: [
-      "AWS (S3, EC2, IAM, CloudFront)",
-      "Docker", "Kubernetes", "CI/CD", "Git", "GitHub", "Jenkins", "SSH",
+      "AWS (S3, EC2, IAM, CloudFront)", "Docker", "Kubernetes",
+      "CI/CD", "Jenkins", "Git", "GitHub", "Linux/Unix", "SSH",
     ],
   },
   {
     label: "Tools",
     items: [
       "SAP", "Hypatos", "Postman", "Jira", "Confluence",
-      "GitLab", "Contentful", "Slack",
+      "GitLab", "OpenAI API", "Contentful",
     ],
   },
 ];

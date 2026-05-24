@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
 
 export const metadata: Metadata = {
   title: "Hristijan Mijalkov — Full-stack Engineer & Aspiring Data Scientist",
@@ -11,9 +15,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hristijan Mijalkov — Full-stack Engineer & Aspiring Data Scientist",
     description:
-      "Portfolio of Hristijan Mijalkov — full-stack engineer and aspiring data scientist building secure web apps and end-to-end ML pipelines.",
+      "Full-stack engineer and aspiring data scientist. Angular, NestJS, Python, AWS. Open to new opportunities.",
     type: "website",
-    url: "https://hristijanmijalkov.dev",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
@@ -23,14 +26,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
-      <body className="min-h-screen bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 transition-colors duration-300">
+    <html
+      lang="en"
+      className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-screen bg-zinc-950 text-zinc-100 font-sans antialiased transition-colors duration-300">
         {children}
       </body>
     </html>

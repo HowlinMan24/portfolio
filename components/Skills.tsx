@@ -2,38 +2,33 @@
 
 import { motion } from "framer-motion";
 import { skillGroups } from "@/data/skills";
+import SectionHeader from "./SectionHeader";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6">
-      <div className="mx-auto max-w-4xl">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl font-bold tracking-tight mb-12 text-zinc-900 dark:text-zinc-50"
-        >
-          Skills
-        </motion.h2>
+    <section id="skills" className="py-28 px-6 relative">
+      <div className="absolute inset-0 border-b border-zinc-800/50 pointer-events-none" />
+      <div className="mx-auto max-w-5xl">
+        <SectionHeader eyebrow="04 — Skills" title="What I work with" />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillGroups.map((group, i) => (
             <motion.div
               key={group.label}
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.06 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: i * 0.07 }}
+              className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 hover:border-zinc-700 transition-colors duration-200"
             >
-              <h3 className="text-xs font-semibold uppercase tracking-widest text-indigo-500 mb-3">
+              <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-indigo-400 mb-4">
                 {group.label}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {group.items.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-full border border-zinc-200 dark:border-zinc-700 px-3 py-1 text-xs font-medium text-zinc-700 dark:text-zinc-300"
+                    className="rounded-md border border-zinc-700/60 bg-zinc-800/60 px-2.5 py-1 text-xs font-medium text-zinc-300 hover:border-indigo-500/40 hover:text-indigo-300 transition-colors cursor-default"
                   >
                     {skill}
                   </span>

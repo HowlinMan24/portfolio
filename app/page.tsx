@@ -20,7 +20,7 @@ export default function Home() {
         <Education />
         <Contact />
       </main>
-      <footer className="border-t border-zinc-200 dark:border-zinc-800 py-8 px-6 text-center text-xs text-zinc-400 dark:text-zinc-600">
+      <footer className="border-t border-zinc-800/60 py-8 px-6 text-center text-xs text-zinc-600">
         © {new Date().getFullYear()} Hristijan Mijalkov · Built with Next.js &amp; Tailwind CSS
       </footer>
     </>

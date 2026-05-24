@@ -1,95 +1,98 @@
 "use client";
 
 import { motion } from "framer-motion";
+import MagneticButton from "./MagneticButton";
+
+const EASE = [0.16, 1, 0.3, 1] as const;
+
+const socials = [
+  { href: "https://github.com/HowlinMan24", label: "GitHub" },
+  { href: "https://linkedin.com/in/hristijan-mijalkov", label: "LinkedIn" },
+  { href: "/CV_HM.pdf", label: "CV.pdf", download: true },
+];
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 px-6 relative overflow-hidden">
-      {/* Background glow */}
+    <section id="contact" className="py-32 px-6 md:px-12 relative overflow-hidden">
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% 100%, rgba(99,102,241,0.12) 0%, transparent 70%)",
+            "radial-gradient(ellipse 70% 50% at 50% 110%, rgba(99,102,241,0.14) 0%, transparent 70%)",
         }}
       />
-      <div className="absolute inset-0 border-t border-zinc-800/50 pointer-events-none" />
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-zinc-700/60 to-transparent" />
 
-      <div className="relative mx-auto max-w-2xl text-center">
+      <div className="relative mx-auto max-w-6xl">
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400 mb-4"
+          className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400 mb-6"
         >
           06 — Contact
         </motion.p>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.05 }}
-          className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white mb-5"
-        >
-          Let&apos;s build something great
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.55, delay: 0.1 }}
-          className="text-zinc-400 text-lg mb-10"
-        >
-          Open to full-time roles, freelance projects, and interesting
-          collaborations. I reply within 24 hours.
-        </motion.p>
+        {/* Giant CTA text */}
+        <div className="mb-14">
+          {["Let's build", "something great"].map((line, i) => (
+            <span key={i} className="line-clip block">
+              <motion.span
+                className="inline-block font-display font-bold text-white"
+                style={{ fontSize: "clamp(40px, 8vw, 120px)", lineHeight: 0.95, letterSpacing: "-0.02em" }}
+                initial={{ y: "110%", opacity: 0 }}
+                whileInView={{ y: "0%", opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.9, delay: i * 0.1, ease: EASE }}
+              >
+                {line}
+              </motion.span>
+            </span>
+          ))}
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.55, delay: 0.18 }}
-          className="flex flex-wrap justify-center gap-4"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-wrap items-center gap-4 mb-16"
         >
-          <a
-            href="mailto:hristijanmijalkov2@gmail.com"
-            className="group inline-flex items-center gap-2.5 rounded-full bg-indigo-500 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-400 hover:shadow-indigo-500/50 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4" aria-hidden>
-              <rect x="2" y="4" width="20" height="16" rx="2" />
-              <path d="m2 7 10 7 10-7" />
-            </svg>
-            hristijanmijalkov2@gmail.com
-          </a>
+          <MagneticButton>
+            <a
+              href="mailto:hristijanmijalkov2@gmail.com"
+              className="inline-flex items-center gap-2.5 rounded-full bg-indigo-500 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-400 hover:shadow-indigo-500/50 transition-all duration-300"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4" aria-hidden>
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m2 7 10 7 10-7" />
+              </svg>
+              Say hello
+            </a>
+          </MagneticButton>
 
-          <a
-            href="https://linkedin.com/in/hristijan-mijalkov"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 rounded-full border border-zinc-700 bg-zinc-900/60 px-6 py-3.5 text-sm font-semibold text-zinc-300 hover:border-indigo-500/50 hover:text-indigo-400 hover:-translate-y-0.5 transition-all duration-200"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden>
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-            LinkedIn
-          </a>
-
-          <a
-            href="https://github.com/HowlinMan24"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 rounded-full border border-zinc-700 bg-zinc-900/60 px-6 py-3.5 text-sm font-semibold text-zinc-300 hover:border-indigo-500/50 hover:text-indigo-400 hover:-translate-y-0.5 transition-all duration-200"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden>
-              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z" />
-            </svg>
-            GitHub
-          </a>
+          {socials.map((s) => (
+            <MagneticButton key={s.label}>
+              <a
+                href={s.href}
+                target={s.download ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                download={s.download}
+                className="inline-flex items-center gap-2 rounded-full border border-zinc-700 px-6 py-4 text-sm font-semibold text-zinc-300 hover:border-indigo-500/50 hover:text-indigo-300 transition-all duration-300"
+              >
+                {s.label}
+              </a>
+            </MagneticButton>
+          ))}
         </motion.div>
+
+        {/* Footer line */}
+        <div className="border-t border-zinc-800/60 pt-8 flex flex-col sm:flex-row justify-between gap-2 text-xs text-zinc-600">
+          <span>hristijanmijalkov2@gmail.com</span>
+          <span>© {new Date().getFullYear()} Hristijan Mijalkov</span>
+        </div>
       </div>
     </section>
   );

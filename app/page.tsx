@@ -6,10 +6,13 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
+import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
 
 export default function Home() {
   return (
-    <>
+    <SmoothScroll>
+      <CustomCursor />
       <Navbar />
       <main>
         <Hero />
@@ -20,9 +23,6 @@ export default function Home() {
         <Education />
         <Contact />
       </main>
-      <footer className="border-t border-zinc-800/60 py-8 px-6 text-center text-xs text-zinc-600">
-        © {new Date().getFullYear()} Hristijan Mijalkov · Built with Next.js &amp; Tailwind CSS
-      </footer>
-    </>
+    </SmoothScroll>
   );
 }

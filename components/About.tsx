@@ -2,56 +2,58 @@
 
 import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
+import Marquee from "./Marquee";
+
+const paras = [
+  "Full-stack engineer and aspiring data scientist based in North Macedonia, building secure web apps and end-to-end ML pipelines since 2023.",
+  "At Vista Point I work on a banking & e-commerce platform — Angular, NestJS, MySQL, Redis — handling KYC onboarding, wire transfers, and FX flows. At Xient GmbH I build predictive models and PySpark ETL pipelines in the SAP × Hypatos ecosystem.",
+  "Drawn to financial systems, fraud detection, and wherever data and security intersect.",
+];
 
 export default function About() {
   return (
-    <section id="about" className="py-28 px-6 relative">
-      <div className="absolute inset-0 border-b border-zinc-800/50 pointer-events-none" />
-      <div className="mx-auto max-w-3xl">
+    <section id="about" className="py-28 relative">
+      <div className="px-6 md:px-12 mx-auto max-w-6xl mb-16">
         <SectionHeader eyebrow="01 — About" title="Who I am" />
-        <div className="space-y-5 text-[1.0625rem] leading-relaxed text-zinc-400">
-          {[
-            "I'm a full-stack engineer and aspiring data scientist based in North Macedonia, building secure web apps and end-to-end ML pipelines professionally since 2023.",
-            <span key="vp">
-              At <span className="text-zinc-100 font-semibold">Vista Point</span> I work on a banking &amp; e-commerce platform — Angular frontends, NestJS APIs, MySQL, and Redis — handling KYC onboarding, wire transfers, and FX trading flows. Concurrently, at{" "}
-              <span className="text-zinc-100 font-semibold">Xient GmbH</span> I build predictive models and PySpark ETL pipelines in the SAP × Hypatos ecosystem.
-            </span>,
-            "I'm especially drawn to financial systems, fraud detection, and wherever data and security intersect. Outside work I tutor students in web development and data programming, and contribute to open-source pipelines like the nf-core Bioinformatics hackathon.",
-          ].map((para, i) => (
-            <motion.p
-              key={i}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.55, delay: i * 0.1 }}
-            >
-              {para}
-            </motion.p>
-          ))}
+        <div className="grid md:grid-cols-[1fr_auto] gap-12 items-start">
+          <div className="space-y-6 max-w-2xl">
+            {paras.map((p, i) => (
+              <motion.p
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="text-[1.05rem] leading-relaxed text-zinc-400"
+              >
+                {p}
+              </motion.p>
+            ))}
+          </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.55, delay: 0.35 }}
-            className="flex flex-wrap gap-3 pt-3"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col gap-3 min-w-[200px]"
           >
             {[
-              "AWS Certified AI Practitioner",
-              "Macedonian — Native",
-              "English — C2",
-              "German — A2",
-            ].map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-zinc-700 bg-zinc-900 px-3.5 py-1 text-xs font-medium text-zinc-300"
-              >
-                {tag}
-              </span>
+              { label: "Cert.", value: "AWS AI Practitioner" },
+              { label: "English", value: "C2 · German A2" },
+              { label: "Based", value: "North Macedonia" },
+            ].map((item) => (
+              <div key={item.label} className="border-t border-zinc-800 pt-3">
+                <p className="text-[10px] uppercase tracking-widest text-zinc-600 mb-0.5">{item.label}</p>
+                <p className="text-sm font-medium text-zinc-300">{item.value}</p>
+              </div>
             ))}
           </motion.div>
         </div>
       </div>
+
+      {/* Tech marquee */}
+      <Marquee />
     </section>
   );
 }

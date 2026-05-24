@@ -5,8 +5,8 @@ import SectionHeader from "./SectionHeader";
 import Marquee from "./Marquee";
 
 const paras = [
-  "Full-stack engineer and data scientist based in North Macedonia, delivering production-grade web applications and end-to-end machine learning pipelines since 2023.",
-  "At Vista Point I lead full-stack development on a regulated banking and e-commerce platform — engineering Angular frontends, NestJS REST APIs, and MySQL/Redis backends that handle KYC onboarding, cross-border wire transfers, and FX trading. At Xient GmbH I design predictive models and large-scale PySpark ETL pipelines within the SAP × Hypatos document-intelligence ecosystem.",
+  "Full-stack engineer and data scientist based in North Macedonia, with two years of industry experience shipping production systems — from a regulated financial platform to enterprise ML pipelines serving clients across Europe.",
+  "At Vista Point I lead full-stack development on a banking and e-commerce platform — engineering Angular frontends, NestJS REST APIs, and MySQL/Redis backends that handle KYC onboarding, cross-border wire transfers, and FX trading. At Xient GmbH I build predictive models and PySpark pipelines for data analysis within the SAP × Hypatos document-intelligence ecosystem.",
   "Particularly drawn to fintech, fraud detection, and the intersection of data engineering and applied security.",
 ];
 

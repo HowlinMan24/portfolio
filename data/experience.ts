@@ -40,7 +40,7 @@ export const experience: ExperienceItem[] = [
     period: "Mar 2025 – Apr 2025",
     tech: ["PHP", "Laravel", "AWS", "OpenAI API", "Python"],
     bullets: [
-      "Volunteered to rapidly design and ship supportkocani.com — a donation coordination platform built with Laravel and deployed on AWS — within days of the Kocani earthquake tragedy to help affected families receive aid.",
+      "Volunteered to rapidly design and ship supportkocani.com — a donation coordination platform built with Laravel and deployed on AWS — within days of the Kocani disco fire tragedy to help affected families receive aid.",
       "Integrated the OpenAI Vision API to automatically parse wire transfer and cheque screenshots, aggregating donation totals in real time and eliminating a fully manual counting process that would have taken hours per day.",
     ],
   },

@@ -55,10 +55,6 @@ export default function Navbar() {
         }`}
       >
         <nav className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4" aria-label="Main navigation">
-          <a href="#hero" className="font-display text-sm font-bold tracking-tight text-sky-500 hover:text-sky-400 transition-colors">
-            HM
-          </a>
-
           <ul className="hidden md:flex items-center gap-1 text-sm font-medium">
             {links.map((l) => (
               <li key={l.href}>

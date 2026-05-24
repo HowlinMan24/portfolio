@@ -21,13 +21,11 @@ export default function Navbar() {
     const onScroll = () => {
       setScrolled(window.scrollY > 30);
 
-      // Scroll progress
       const doc = document.documentElement;
       const scrolled = doc.scrollTop || document.body.scrollTop;
       const total = doc.scrollHeight - doc.clientHeight;
       setProgress(total > 0 ? (scrolled / total) * 100 : 0);
 
-      // Scroll spy
       for (const l of [...links].reverse()) {
         const el = document.querySelector(l.href);
         if (el && el.getBoundingClientRect().top <= 120) {
@@ -43,7 +41,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Scroll progress bar */}
       <div
         aria-hidden
         className="fixed top-0 left-0 z-[60] h-0.5 bg-sky-500 transition-all duration-75"
@@ -53,16 +50,15 @@ export default function Navbar() {
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/60"
+            ? "bg-white/90 backdrop-blur-md border-b border-zinc-200/80 shadow-sm shadow-zinc-100"
             : "bg-transparent"
         }`}
       >
         <nav className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4" aria-label="Main navigation">
-          <a href="#hero" className="font-display text-sm font-bold tracking-tight text-sky-400 hover:text-sky-300 transition-colors">
+          <a href="#hero" className="font-display text-sm font-bold tracking-tight text-sky-500 hover:text-sky-400 transition-colors">
             HM
           </a>
 
-          {/* Desktop nav */}
           <ul className="hidden md:flex items-center gap-1 text-sm font-medium">
             {links.map((l) => (
               <li key={l.href}>
@@ -70,12 +66,12 @@ export default function Navbar() {
                   href={l.href}
                   className={`relative px-3 py-1.5 rounded-md transition-colors ${
                     active === l.href
-                      ? "text-sky-400"
-                      : "text-zinc-400 hover:text-zinc-100"
+                      ? "text-sky-500"
+                      : "text-zinc-500 hover:text-zinc-900"
                   }`}
                 >
                   {active === l.href && (
-                    <span className="absolute inset-0 rounded-md bg-sky-500/10" />
+                    <span className="absolute inset-0 rounded-md bg-sky-500/8" />
                   )}
                   {l.label}
                 </a>
@@ -85,7 +81,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-2">
             <button
-              className="md:hidden p-2 text-zinc-400 hover:text-zinc-100 transition-colors"
+              className="md:hidden p-2 text-zinc-500 hover:text-zinc-900 transition-colors"
               aria-label="Open menu"
               onClick={() => setOpen((o) => !o)}
             >
@@ -104,9 +100,8 @@ export default function Navbar() {
           </div>
         </nav>
 
-        {/* Mobile menu */}
         {open && (
-          <div className="md:hidden bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800 px-6 pb-5">
+          <div className="md:hidden bg-white/95 backdrop-blur-md border-b border-zinc-200 px-6 pb-5">
             <ul className="flex flex-col gap-1 text-sm font-medium">
               {links.map((l) => (
                 <li key={l.href}>
@@ -115,8 +110,8 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                     className={`block px-3 py-2 rounded-md transition-colors ${
                       active === l.href
-                        ? "text-sky-400 bg-sky-500/10"
-                        : "text-zinc-400 hover:text-zinc-100"
+                        ? "text-sky-500 bg-sky-500/8"
+                        : "text-zinc-500 hover:text-zinc-900"
                     }`}
                   >
                     {l.label}

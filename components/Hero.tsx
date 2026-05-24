@@ -24,21 +24,18 @@ function LineReveal({ children, delay = 0, className = "" }: { children: React.R
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex flex-col overflow-hidden">
-      {/* Grain */}
-      <div aria-hidden className="absolute inset-0 bg-noise opacity-30 pointer-events-none" />
-
       {/* Subtle grid */}
       <div
         aria-hidden className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "linear-gradient(rgba(56,189,248,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,0.04) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(rgba(0,0,0,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.025) 1px, transparent 1px)",
           backgroundSize: "80px 80px",
         }}
       />
 
       {/* Sky glow */}
       <div aria-hidden className="absolute top-1/3 left-0 w-[500px] h-[500px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.08) 0%, transparent 70%)" }} />
+        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.06) 0%, transparent 70%)" }} />
 
       <div className="relative z-10 flex-1 flex flex-col md:flex-row mx-auto w-full max-w-7xl px-6 md:px-12 pt-28 pb-20">
 
@@ -47,12 +44,12 @@ export default function Hero() {
           <h1 className="font-display font-bold leading-[0.88] tracking-tight mb-8">
             <div>
               <LineReveal delay={0}>
-                <span className="text-white" style={{ fontSize: "clamp(64px, 10vw, 160px)" }}>HRISTIJAN</span>
+                <span className="text-zinc-900" style={{ fontSize: "clamp(64px, 10vw, 160px)" }}>HRISTIJAN</span>
               </LineReveal>
             </div>
             <div>
               <LineReveal delay={0.1}>
-                <span style={{ fontSize: "clamp(64px, 10vw, 160px)", WebkitTextStroke: "1px rgba(255,255,255,0.3)", color: "transparent" }}>
+                <span style={{ fontSize: "clamp(64px, 10vw, 160px)", WebkitTextStroke: "1.5px rgba(0,0,0,0.18)", color: "transparent" }}>
                   MIJALKOV
                 </span>
               </LineReveal>
@@ -61,7 +58,7 @@ export default function Hero() {
 
           <div className="mb-8">
             <LineReveal delay={0.22}>
-              <span className="text-lg sm:text-xl text-zinc-400 font-medium block">
+              <span className="text-lg sm:text-xl text-zinc-500 font-medium block">
                 Full-stack Engineer &amp; Data Scientist
               </span>
             </LineReveal>
@@ -92,7 +89,7 @@ export default function Hero() {
                   href={l.href}
                   target={l.href.startsWith("mailto") ? undefined : "_blank"}
                   rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full border border-zinc-700 bg-zinc-900/60 px-5 py-3 text-sm font-semibold text-zinc-300 hover:border-sky-500/50 hover:text-sky-300 transition-all duration-300"
+                  className="inline-flex items-center rounded-full border border-zinc-300 bg-zinc-50 px-5 py-3 text-sm font-semibold text-zinc-600 hover:border-sky-500/50 hover:text-sky-500 hover:bg-sky-50 transition-all duration-300"
                 >
                   {l.label}
                 </a>
@@ -108,16 +105,15 @@ export default function Hero() {
           transition={{ delay: 0.3, duration: 0.9, ease: EASE } as Transition}
           className="hidden md:flex flex-col justify-end items-end ml-12 shrink-0"
         >
-          <div className="relative w-64 lg:w-80 aspect-[3/4] rounded-2xl overflow-hidden border border-zinc-700/60">
+          <div className="relative w-64 lg:w-80 aspect-[3/4] rounded-2xl overflow-hidden border border-zinc-200">
             <Image
               src="/photo.jpg"
               alt="Hristijan Mijalkov"
               fill
-              className="object-cover object-top grayscale-[20%]"
+              className="object-cover object-top grayscale-[10%]"
               priority
             />
-            {/* Subtle overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent" />
           </div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -125,8 +121,8 @@ export default function Hero() {
             transition={{ delay: 0.7 }}
             className="mt-3 text-right"
           >
-            <p className="text-[10px] uppercase tracking-widest text-zinc-600">Based in</p>
-            <p className="text-xs text-zinc-400 font-medium">North Macedonia</p>
+            <p className="text-[10px] uppercase tracking-widest text-zinc-400">Based in</p>
+            <p className="text-xs text-zinc-500 font-medium">North Macedonia</p>
           </motion.div>
         </motion.div>
       </div>
@@ -138,7 +134,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-zinc-600 hover:text-sky-400 transition-colors"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-zinc-400 hover:text-sky-500 transition-colors"
       >
         <span className="text-[10px] tracking-[0.2em] uppercase">Scroll</span>
         <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>

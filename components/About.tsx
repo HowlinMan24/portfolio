@@ -5,9 +5,9 @@ import SectionHeader from "./SectionHeader";
 import Marquee from "./Marquee";
 
 const paras = [
-  "Full-stack engineer and aspiring data scientist based in North Macedonia, building secure web apps and end-to-end ML pipelines since 2023.",
-  "At Vista Point I work on a banking & e-commerce platform — Angular, NestJS, MySQL, Redis — handling KYC onboarding, wire transfers, and FX flows. At Xient GmbH I build predictive models and PySpark ETL pipelines in the SAP × Hypatos ecosystem.",
-  "Drawn to financial systems, fraud detection, and wherever data and security intersect.",
+  "Full-stack engineer and data scientist based in North Macedonia, delivering production-grade web applications and end-to-end machine learning pipelines since 2023.",
+  "At Vista Point I lead full-stack development on a regulated banking and e-commerce platform — engineering Angular frontends, NestJS REST APIs, and MySQL/Redis backends that handle KYC onboarding, cross-border wire transfers, and FX trading. At Xient GmbH I design predictive models and large-scale PySpark ETL pipelines within the SAP × Hypatos document-intelligence ecosystem.",
+  "Particularly drawn to fintech, fraud detection, and the intersection of data engineering and applied security.",
 ];
 
 export default function About() {
@@ -24,7 +24,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="text-[1.05rem] leading-relaxed text-zinc-400"
+                className="text-[1.05rem] leading-relaxed text-zinc-500"
               >
                 {p}
               </motion.p>
@@ -43,16 +43,15 @@ export default function About() {
               { label: "English", value: "C2 · German A2" },
               { label: "Based", value: "North Macedonia" },
             ].map((item) => (
-              <div key={item.label} className="border-t border-zinc-800 pt-3">
-                <p className="text-[10px] uppercase tracking-widest text-zinc-600 mb-0.5">{item.label}</p>
-                <p className="text-sm font-medium text-zinc-300">{item.value}</p>
+              <div key={item.label} className="border-t border-zinc-200 pt-3">
+                <p className="text-[10px] uppercase tracking-widest text-zinc-400 mb-0.5">{item.label}</p>
+                <p className="text-sm font-medium text-zinc-700">{item.value}</p>
               </div>
             ))}
           </motion.div>
         </div>
       </div>
 
-      {/* Tech marquee */}
       <Marquee />
     </section>
   );

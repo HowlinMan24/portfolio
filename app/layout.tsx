@@ -9,13 +9,13 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Hristijan Mijalkov — Full-stack Engineer & Aspiring Data Scientist",
+  title: "Hristijan Mijalkov — Full-stack Engineer & Data Scientist",
   description:
-    "Portfolio of Hristijan Mijalkov — full-stack engineer and aspiring data scientist building secure web apps and end-to-end ML pipelines.",
+    "Portfolio of Hristijan Mijalkov — full-stack engineer and data scientist building production web apps and end-to-end ML pipelines.",
   openGraph: {
-    title: "Hristijan Mijalkov — Full-stack Engineer & Aspiring Data Scientist",
+    title: "Hristijan Mijalkov — Full-stack Engineer & Data Scientist",
     description:
-      "Full-stack engineer and aspiring data scientist. Angular, NestJS, Python, AWS. Open to new opportunities.",
+      "Full-stack engineer and data scientist. Angular, NestJS, Python, PySpark, AWS. Open to new opportunities.",
     type: "website",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-zinc-950 text-zinc-100 font-sans antialiased transition-colors duration-300">
+      <body className="min-h-screen bg-white text-zinc-900 font-sans antialiased">
         {children}
       </body>
     </html>

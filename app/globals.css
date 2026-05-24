@@ -22,8 +22,8 @@ body.custom-cursor * {
 }
 
 ::selection {
-  background: rgba(56, 189, 248, 0.3);
-  color: #fff;
+  background: rgba(56, 189, 248, 0.25);
+  color: #0c0a09;
 }
 
 .font-display {

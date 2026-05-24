@@ -12,17 +12,22 @@ const sorted = [...projects].sort(
 );
 
 const categoryGradients: Record<string, string> = {
-  Web:          "from-blue-900/80 to-sky-900/60",
-  AI:           "from-violet-900/80 to-purple-900/60",
-  ML:           "from-emerald-900/80 to-teal-900/60",
-  Data:         "from-amber-900/80 to-orange-900/60",
-  "OS/Systems": "from-rose-900/80 to-red-900/60",
-  Other:        "from-zinc-800/80 to-zinc-900/60",
+  Web:          "from-blue-100 to-sky-100",
+  AI:           "from-violet-100 to-purple-100",
+  ML:           "from-emerald-100 to-teal-100",
+  Data:         "from-amber-100 to-orange-100",
+  "OS/Systems": "from-rose-100 to-red-100",
+  Other:        "from-zinc-100 to-zinc-200",
 };
 
 const categoryDot: Record<string, string> = {
   Web: "bg-blue-400", AI: "bg-violet-400", ML: "bg-emerald-400",
   Data: "bg-amber-400", "OS/Systems": "bg-rose-400", Other: "bg-zinc-400",
+};
+
+const categoryText: Record<string, string> = {
+  Web: "text-blue-600", AI: "text-violet-600", ML: "text-emerald-600",
+  Data: "text-amber-600", "OS/Systems": "text-rose-600", Other: "text-zinc-500",
 };
 
 interface ProjectRowProps {
@@ -48,19 +53,19 @@ function ProjectRow({ project, index, onHover, onMove }: ProjectRowProps) {
         target="_blank"
         rel="noopener noreferrer"
         data-cursor="true"
-        className="group flex items-center justify-between py-6 border-t border-zinc-800/60 hover:border-zinc-700/80 transition-colors duration-300"
+        className="group flex items-center justify-between py-6 border-t border-zinc-200/80 hover:border-zinc-300 transition-colors duration-300"
         onMouseEnter={() => { setHovered(true); onHover(project); }}
         onMouseLeave={() => { setHovered(false); onHover(null); }}
         onMouseMove={onMove}
       >
         {/* Left: number + name */}
         <div className="flex items-center gap-6 flex-1 min-w-0">
-          <span className="text-xs text-zinc-600 font-mono tabular-nums shrink-0 w-6">
+          <span className="text-xs text-zinc-300 font-mono tabular-nums shrink-0 w-6">
             {String(index + 1).padStart(2, "0")}
           </span>
           <motion.span
             className="font-display font-bold text-3xl sm:text-4xl md:text-5xl leading-none truncate"
-            animate={{ color: hovered ? "#a5b4fc" : "#f4f4f5" }}
+            animate={{ color: hovered ? "#0ea5e9" : "#18181b" }}
             transition={{ duration: 0.25 }}
           >
             {project.name}
@@ -69,13 +74,13 @@ function ProjectRow({ project, index, onHover, onMove }: ProjectRowProps) {
 
         {/* Right: category + arrow */}
         <div className="flex items-center gap-4 shrink-0 ml-6">
-          <span className="hidden sm:flex items-center gap-2 text-xs font-medium text-zinc-500">
+          <span className="hidden sm:flex items-center gap-2 text-xs font-medium text-zinc-400">
             <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${categoryDot[project.category]}`} />
             {project.category}
           </span>
           <motion.span
-            className="text-zinc-600"
-            animate={{ x: hovered ? 4 : 0, color: hovered ? "#818cf8" : "#52525b" }}
+            className="text-zinc-400"
+            animate={{ x: hovered ? 4 : 0, color: hovered ? "#0ea5e9" : "#a1a1aa" }}
             transition={{ duration: 0.2 }}
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5">
@@ -141,14 +146,14 @@ export default function Projects() {
                 className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-all duration-200 ${
                   on
                     ? "bg-sky-500 border-sky-500 text-white"
-                    : "border-zinc-700 text-zinc-500 hover:border-zinc-500 hover:text-zinc-200 bg-transparent"
+                    : "border-zinc-300 text-zinc-500 hover:border-zinc-400 hover:text-zinc-700 bg-transparent"
                 }`}
               >
                 {cat}
               </button>
             );
           })}
-          <span className="ml-auto self-center text-xs text-zinc-600">
+          <span className="ml-auto self-center text-xs text-zinc-400">
             {filtered.length} / {sorted.length}
           </span>
         </motion.div>
@@ -161,7 +166,7 @@ export default function Projects() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="py-16 text-center text-zinc-600 text-sm"
+              className="py-16 text-center text-zinc-400 text-sm"
             >
               No projects match this filter.
             </motion.p>
@@ -179,7 +184,7 @@ export default function Projects() {
         </AnimatePresence>
 
         {/* Last border */}
-        <div className="border-t border-zinc-800/60" />
+        <div className="border-t border-zinc-200/80" />
       </div>
 
       {/* Cursor-following thumbnail */}
@@ -187,7 +192,7 @@ export default function Projects() {
         {hoveredProject && (
           <motion.div
             key={hoveredProject.name}
-            className="fixed pointer-events-none z-40 w-60 rounded-xl overflow-hidden shadow-2xl shadow-black/60"
+            className="fixed pointer-events-none z-40 w-60 rounded-xl overflow-hidden shadow-xl shadow-zinc-200/60 border border-zinc-200"
             style={{ left: 0, top: 0, x: thumbX, y: thumbY }}
             initial={{ opacity: 0, scale: 0.85, rotate: -2 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -196,18 +201,18 @@ export default function Projects() {
           >
             {/* Gradient header */}
             <div className={`h-24 bg-gradient-to-br ${categoryGradients[hoveredProject.category]} flex items-end p-3`}>
-              <span className="text-xs font-semibold text-zinc-300/80">
+              <span className={`text-xs font-semibold ${categoryText[hoveredProject.category]}`}>
                 {hoveredProject.category}
               </span>
             </div>
             {/* Info body */}
-            <div className="bg-zinc-900 p-3">
-              <p className="text-xs font-semibold text-white mb-2 truncate">
+            <div className="bg-white p-3">
+              <p className="text-xs font-semibold text-zinc-900 mb-2 truncate">
                 {hoveredProject.name}
               </p>
               <div className="flex flex-wrap gap-1">
                 {hoveredProject.tech.slice(0, 4).map((t) => (
-                  <span key={t} className="rounded bg-zinc-800 px-1.5 py-0.5 text-[10px] text-zinc-400">
+                  <span key={t} className="rounded bg-zinc-100 px-1.5 py-0.5 text-[10px] text-zinc-600">
                     {t}
                   </span>
                 ))}

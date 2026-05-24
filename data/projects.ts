@@ -125,4 +125,57 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/HowlinMan24/OperatingSystems",
     updatedAt: "2024-09-17",
   },
+
+  // ── Newly pushed from local ─────────────────────────────────────────────────
+  {
+    name: "Treatment Pathway Analysis",
+    description:
+      "Sequence mining and ML pipeline for diabetes treatment pathway analysis. EDA, preprocessing, and pattern extraction on real clinical data.",
+    category: "Data",
+    secondaryTags: ["ML"],
+    tech: ["Python", "Jupyter", "Sequence Mining", "scikit-learn", "Data Mining"],
+    repoUrl: "https://github.com/HowlinMan24/Pathway-Analysis",
+    updatedAt: "2025-08-29",
+    highlight: true,
+  },
+  {
+    name: "Diabetes ML Streaming",
+    description:
+      "End-to-end diabetes prediction pipeline: offline Spark ML model training and online real-time inference via Kafka streaming producer/consumer.",
+    category: "ML",
+    secondaryTags: ["Data"],
+    tech: ["Python", "PySpark", "Kafka", "Docker", "Streaming", "scikit-learn"],
+    repoUrl: "https://github.com/HowlinMan24/diabetes-ml-streaming",
+    updatedAt: "2025-11-30",
+    highlight: true,
+  },
+  {
+    name: "Spark ALS — Movie Recommender",
+    description:
+      "Movie recommendation system using Apache Spark's ALS collaborative filtering on the MovieLens 100K dataset. Jupyter-based training and evaluation.",
+    category: "ML",
+    secondaryTags: ["Data"],
+    tech: ["PySpark", "Spark ALS", "Jupyter", "Collaborative Filtering"],
+    repoUrl: "https://github.com/HowlinMan24/spark-als-movielens",
+    updatedAt: "2025-05-24",
+  },
+  {
+    name: "Data Science Labs",
+    description:
+      "Intro to Data Science lab exercises: EDA on climate and power consumption data, feature engineering, model training, and visualizations.",
+    category: "Data",
+    tech: ["Python", "Jupyter", "Pandas", "EDA", "scikit-learn"],
+    repoUrl: "https://github.com/HowlinMan24/data-science-labs",
+    updatedAt: "2025-01-19",
+  },
+  {
+    name: "Flink Streaming App",
+    description:
+      "Apache Flink Big Data streaming application built with Java and Maven — stateful stream processing and real-time event handling.",
+    category: "Data",
+    secondaryTags: ["OS/Systems"],
+    tech: ["Java", "Apache Flink", "Maven", "Stream Processing"],
+    repoUrl: "https://github.com/HowlinMan24/flink-streaming",
+    updatedAt: "2025-05-24",
+  },
 ];

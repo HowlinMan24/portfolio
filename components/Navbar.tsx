@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#about", label: "About" },
@@ -85,7 +84,6 @@ export default function Navbar() {
           </ul>
 
           <div className="flex items-center gap-2">
-            <ThemeToggle />
             <button
               className="md:hidden p-2 text-zinc-400 hover:text-zinc-100 transition-colors"
               aria-label="Open menu"

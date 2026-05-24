@@ -39,15 +39,9 @@ export default function Hero() {
       <div aria-hidden className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent" />
 
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-7">
-        {/* Pulsing availability badge */}
-        <motion.div {...fadeUp(0)} className="flex items-center gap-2.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest uppercase text-indigo-400">
-          <span className="pulse-dot w-2 h-2 rounded-full bg-indigo-400 shrink-0" />
-          Available for new opportunities
-        </motion.div>
-
         {/* Name */}
         <motion.h1
-          {...fadeUp(0.1)}
+          {...fadeUp(0)}
           className="font-display text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight leading-[0.9] text-white"
         >
           Hristijan
@@ -59,7 +53,7 @@ export default function Hero() {
 
         {/* Title */}
         <motion.p
-          {...fadeUp(0.2)}
+          {...fadeUp(0.1)}
           className="text-xl sm:text-2xl font-medium text-zinc-400"
         >
           Full-stack Engineer &amp; Aspiring Data Scientist
@@ -67,7 +61,7 @@ export default function Hero() {
 
         {/* Pitch */}
         <motion.p
-          {...fadeUp(0.3)}
+          {...fadeUp(0.2)}
           className="max-w-xl text-base sm:text-lg text-zinc-500 leading-relaxed"
         >
           Building secure web apps and end-to-end ML pipelines. Comfortable
@@ -78,7 +72,7 @@ export default function Hero() {
 
         {/* CTA buttons */}
         <motion.div
-          {...fadeUp(0.4)}
+          {...fadeUp(0.3)}
           className="flex flex-wrap items-center justify-center gap-3 pt-1"
         >
           <a
@@ -130,7 +124,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Scroll cue */}
-        <motion.div {...fadeUp(0.55)} className="pt-6">
+        <motion.div {...fadeUp(0.45)} className="pt-6">
           <a href="#about" aria-label="Scroll to about section" className="flex flex-col items-center gap-1 text-zinc-600 hover:text-indigo-400 transition-colors">
             <span className="text-xs tracking-widest uppercase">Scroll</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 animate-bounce">

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-display), var(--font-inter), ui-sans-serif, sans-serif;
@@ -8,6 +10,19 @@
 body {
   -webkit-font-smoothing: antialiased;
   overscroll-behavior: none;
+}
+
+/* Project name color via CSS var for dark-mode compatibility */
+:root { --project-name-color: #18181b; }
+.dark { --project-name-color: #f4f4f5; }
+
+/* Dark-mode outline text for hero */
+.text-outline {
+  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.18);
+  color: transparent;
+}
+.dark .text-outline {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.2);
 }
 
 body.custom-cursor,

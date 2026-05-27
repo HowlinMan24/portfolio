@@ -74,18 +74,18 @@ export default function Education() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.55 }}
-          className="rounded-xl border border-zinc-200 bg-white p-6 mb-8 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4"
+          className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 p-6 mb-8 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4"
         >
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-sky-500 mb-1.5">
               B.Sc. Software Engineering &amp; Information Systems
             </p>
-            <h3 className="font-display text-xl font-semibold text-zinc-900 mb-1">
+            <h3 className="font-display text-xl font-semibold text-zinc-900 dark:text-zinc-100 mb-1">
               Faculty of Computer Science and Engineering (FINKI), UKIM
             </h3>
-            <p className="text-sm text-zinc-400">Skopje, North Macedonia</p>
+            <p className="text-sm text-zinc-400 dark:text-zinc-500">Skopje, North Macedonia</p>
           </div>
-          <span className="shrink-0 self-start rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 text-xs font-semibold text-emerald-600">
+          <span className="shrink-0 self-start rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 px-3 py-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
             Graduated
           </span>
         </motion.div>
@@ -96,7 +96,7 @@ export default function Education() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-xs font-semibold uppercase tracking-widest text-zinc-400 mb-4"
+          className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-4"
         >
           Key coursework
         </motion.p>
@@ -109,10 +109,10 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.45, delay: i * 0.04 }}
-              className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3.5 hover:border-sky-200 hover:bg-sky-50/40 transition-all duration-200"
+              className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 px-4 py-3.5 hover:border-sky-200 dark:hover:border-sky-700/40 hover:bg-sky-50/40 dark:hover:bg-sky-500/5 transition-all duration-200"
             >
-              <p className="text-sm font-semibold text-zinc-800 mb-1">{s.name}</p>
-              <p className="text-xs text-zinc-500 leading-relaxed">{s.desc}</p>
+              <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mb-1">{s.name}</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-500 leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -129,12 +129,12 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="rounded-xl border border-zinc-200 bg-white px-5 py-4"
+              className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 px-5 py-4"
             >
-              <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400 mb-1.5">
+              <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-1.5">
                 {item.label}
               </p>
-              <p className="text-sm font-semibold text-zinc-800">{item.value}</p>
+              <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">{item.value}</p>
             </motion.div>
           ))}
         </div>

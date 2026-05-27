@@ -169,6 +169,16 @@ export const projects: Project[] = [
     updatedAt: "2025-01-19",
   },
   {
+    name: "System Design Notes",
+    description:
+      "Architecture patterns from monolith to event-driven and AWS systems — each with Mermaid diagrams, trade-off analysis, and when-to-use guidance.",
+    category: "Other",
+    tech: ["System Design", "AWS", "Microservices", "CQRS", "Event-Driven"],
+    repoUrl: "https://github.com/HowlinMan24/system-design",
+    updatedAt: "2026-05-27",
+    highlight: true,
+  },
+  {
     name: "Flink Streaming App",
     description:
       "Apache Flink Big Data streaming application built with Java and Maven — stateful stream processing and real-time event handling.",

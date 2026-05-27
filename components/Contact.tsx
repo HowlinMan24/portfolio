@@ -5,7 +5,7 @@ import MagneticButton from "./MagneticButton";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative bg-zinc-50 border-t border-zinc-200">
+    <section id="contact" className="relative bg-zinc-50 dark:bg-zinc-900/30 border-t border-zinc-200 dark:border-zinc-800">
       <div className="mx-auto max-w-6xl px-6 md:px-12 py-20">
 
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10">
@@ -20,12 +20,12 @@ export default function Contact() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-500 mb-4">
               Contact
             </p>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-zinc-900 tracking-tight mb-6">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight mb-6">
               Let's work together.
             </h2>
             <a
               href="mailto:hristijanmijalkov2@gmail.com"
-              className="group inline-flex items-center gap-4 text-zinc-500 hover:text-sky-500 transition-colors duration-300"
+              className="group inline-flex items-center gap-4 text-zinc-500 dark:text-zinc-400 hover:text-sky-500 transition-colors duration-300"
             >
               <span className="w-10 h-px bg-zinc-300 group-hover:bg-sky-400 group-hover:w-16 transition-all duration-300" />
               <span className="text-base sm:text-lg font-medium tracking-tight">
@@ -67,7 +67,7 @@ export default function Contact() {
                   target={s.download ? undefined : "_blank"}
                   rel="noopener noreferrer"
                   download={s.download}
-                  className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-3.5 text-sm font-semibold text-zinc-600 hover:border-sky-400/60 hover:text-sky-500 hover:bg-sky-50 transition-all duration-300"
+                  className="inline-flex items-center gap-2 rounded-full border border-zinc-300 dark:border-zinc-700 px-6 py-3.5 text-sm font-semibold text-zinc-600 dark:text-zinc-300 hover:border-sky-400/60 hover:text-sky-500 hover:bg-sky-50 dark:hover:bg-sky-500/10 transition-all duration-300"
                 >
                   {s.label}
                 </a>
@@ -77,7 +77,7 @@ export default function Contact() {
         </div>
 
         {/* Footer */}
-        <div className="mt-16 pt-8 border-t border-zinc-200 flex flex-col sm:flex-row justify-between gap-2 text-xs text-zinc-400">
+        <div className="mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col sm:flex-row justify-between gap-2 text-xs text-zinc-400 dark:text-zinc-600">
           <span>hristijanmijalkov2@gmail.com</span>
           <span>© {new Date().getFullYear()} Hristijan Mijalkov</span>
         </div>

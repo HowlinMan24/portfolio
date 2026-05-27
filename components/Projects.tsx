@@ -6,6 +6,7 @@ import { projects, type Category } from "@/data/projects";
 import SectionHeader from "./SectionHeader";
 
 const CATEGORIES: Array<Category | "All"> = ["All", "Web", "AI", "ML", "Data", "OS/Systems", "Other"];
+const INITIAL_SHOW = 6;
 
 const sorted = [...projects].sort(
   (a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
@@ -53,33 +54,40 @@ function ProjectRow({ project, index, onHover, onMove }: ProjectRowProps) {
         target="_blank"
         rel="noopener noreferrer"
         data-cursor="true"
-        className="group flex items-center justify-between py-6 border-t border-zinc-200/80 hover:border-zinc-300 transition-colors duration-300"
+        className="group flex items-center justify-between py-5 border-t border-zinc-200/80 dark:border-zinc-800/60 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors duration-300"
         onMouseEnter={() => { setHovered(true); onHover(project); }}
         onMouseLeave={() => { setHovered(false); onHover(null); }}
         onMouseMove={onMove}
       >
-        {/* Left: number + name */}
+        {/* Left: number + name + description */}
         <div className="flex items-center gap-6 flex-1 min-w-0">
-          <span className="text-xs text-zinc-300 font-mono tabular-nums shrink-0 w-6">
+          <span className="text-xs text-zinc-300 dark:text-zinc-600 font-mono tabular-nums shrink-0 w-6">
             {String(index + 1).padStart(2, "0")}
           </span>
-          <motion.span
-            className="font-display font-bold text-3xl sm:text-4xl md:text-5xl leading-none truncate"
-            animate={{ color: hovered ? "#0ea5e9" : "#18181b" }}
-            transition={{ duration: 0.25 }}
-          >
-            {project.name}
-          </motion.span>
+          <div className="min-w-0">
+            <motion.span
+              className="font-display font-bold text-2xl sm:text-3xl md:text-4xl leading-none block truncate"
+              animate={{ color: hovered ? "#0ea5e9" : "var(--project-name-color, #18181b)" }}
+              transition={{ duration: 0.25 }}
+            >
+              {project.name}
+            </motion.span>
+            {project.description && (
+              <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-1 leading-relaxed line-clamp-1 pr-4">
+                {project.description}
+              </p>
+            )}
+          </div>
         </div>
 
         {/* Right: category + arrow */}
         <div className="flex items-center gap-4 shrink-0 ml-6">
-          <span className="hidden sm:flex items-center gap-2 text-xs font-medium text-zinc-400">
+          <span className="hidden sm:flex items-center gap-2 text-xs font-medium text-zinc-400 dark:text-zinc-500">
             <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${categoryDot[project.category]}`} />
             {project.category}
           </span>
           <motion.span
-            className="text-zinc-400"
+            className="text-zinc-400 dark:text-zinc-600"
             animate={{ x: hovered ? 4 : 0, color: hovered ? "#0ea5e9" : "#a1a1aa" }}
             transition={{ duration: 0.2 }}
           >
@@ -96,6 +104,7 @@ function ProjectRow({ project, index, onHover, onMove }: ProjectRowProps) {
 export default function Projects() {
   const [active, setActive] = useState<Set<Category>>(new Set());
   const [hoveredProject, setHoveredProject] = useState<(typeof sorted)[0] | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const curX = useMotionValue(-400);
   const curY = useMotionValue(-400);
@@ -112,13 +121,17 @@ export default function Projects() {
     return sorted.filter((p) => active.has(p.category));
   }, [active]);
 
+  const visible = showAll ? filtered : filtered.slice(0, INITIAL_SHOW);
+  const hasMore = filtered.length > INITIAL_SHOW;
+
   const toggle = (cat: Category | "All") => {
-    if (cat === "All") { setActive(new Set()); return; }
+    if (cat === "All") { setActive(new Set()); setShowAll(false); return; }
     setActive((prev) => {
       const next = new Set(prev);
       next.has(cat as Category) ? next.delete(cat as Category) : next.add(cat as Category);
       return next;
     });
+    setShowAll(false);
   };
 
   return (
@@ -146,14 +159,14 @@ export default function Projects() {
                 className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-all duration-200 ${
                   on
                     ? "bg-sky-500 border-sky-500 text-white"
-                    : "border-zinc-300 text-zinc-500 hover:border-zinc-400 hover:text-zinc-700 bg-transparent"
+                    : "border-zinc-300 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400 hover:border-zinc-400 dark:hover:border-zinc-600 hover:text-zinc-700 dark:hover:text-zinc-200 bg-transparent"
                 }`}
               >
                 {cat}
               </button>
             );
           })}
-          <span className="ml-auto self-center text-xs text-zinc-400">
+          <span className="ml-auto self-center text-xs text-zinc-400 dark:text-zinc-500">
             {filtered.length} / {sorted.length}
           </span>
         </motion.div>
@@ -166,12 +179,12 @@ export default function Projects() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="py-16 text-center text-zinc-400 text-sm"
+              className="py-16 text-center text-zinc-400 dark:text-zinc-500 text-sm"
             >
               No projects match this filter.
             </motion.p>
           ) : (
-            filtered.map((project, i) => (
+            visible.map((project, i) => (
               <ProjectRow
                 key={project.name}
                 project={project}
@@ -184,7 +197,27 @@ export default function Projects() {
         </AnimatePresence>
 
         {/* Last border */}
-        <div className="border-t border-zinc-200/80" />
+        <div className="border-t border-zinc-200/80 dark:border-zinc-800/60" />
+
+        {/* Show more / less */}
+        {hasMore && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="flex justify-center mt-8"
+          >
+            <button
+              onClick={() => setShowAll((v) => !v)}
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-300 dark:border-zinc-700 px-6 py-2.5 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:border-sky-400/60 hover:text-sky-500 dark:hover:text-sky-400 hover:bg-sky-50 dark:hover:bg-sky-500/5 transition-all duration-200"
+            >
+              {showAll ? (
+                <>Show less <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4"><path strokeLinecap="round" d="M5 15l7-7 7 7" /></svg></>
+              ) : (
+                <>Show all {filtered.length} projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4"><path strokeLinecap="round" d="M19 9l-7 7-7-7" /></svg></>
+              )}
+            </button>
+          </motion.div>
+        )}
       </div>
 
       {/* Cursor-following thumbnail */}
@@ -192,27 +225,28 @@ export default function Projects() {
         {hoveredProject && (
           <motion.div
             key={hoveredProject.name}
-            className="fixed pointer-events-none z-40 w-60 rounded-xl overflow-hidden shadow-xl shadow-zinc-200/60 border border-zinc-200"
+            className="fixed pointer-events-none z-40 w-60 rounded-xl overflow-hidden shadow-xl shadow-zinc-200/60 dark:shadow-zinc-900/60 border border-zinc-200 dark:border-zinc-700"
             style={{ left: 0, top: 0, x: thumbX, y: thumbY }}
             initial={{ opacity: 0, scale: 0.85, rotate: -2 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             exit={{ opacity: 0, scale: 0.85, rotate: 2 }}
             transition={{ duration: 0.2 }}
           >
-            {/* Gradient header */}
             <div className={`h-24 bg-gradient-to-br ${categoryGradients[hoveredProject.category]} flex items-end p-3`}>
               <span className={`text-xs font-semibold ${categoryText[hoveredProject.category]}`}>
                 {hoveredProject.category}
               </span>
             </div>
-            {/* Info body */}
-            <div className="bg-white p-3">
-              <p className="text-xs font-semibold text-zinc-900 mb-2 truncate">
+            <div className="bg-white dark:bg-zinc-900 p-3">
+              <p className="text-xs font-semibold text-zinc-900 dark:text-zinc-100 mb-1.5 truncate">
                 {hoveredProject.name}
+              </p>
+              <p className="text-[10px] text-zinc-500 dark:text-zinc-500 leading-relaxed line-clamp-2 mb-2">
+                {hoveredProject.description}
               </p>
               <div className="flex flex-wrap gap-1">
                 {hoveredProject.tech.slice(0, 4).map((t) => (
-                  <span key={t} className="rounded bg-zinc-100 px-1.5 py-0.5 text-[10px] text-zinc-600">
+                  <span key={t} className="rounded bg-zinc-100 dark:bg-zinc-800 px-1.5 py-0.5 text-[10px] text-zinc-600 dark:text-zinc-400">
                     {t}
                   </span>
                 ))}

@@ -16,7 +16,7 @@ function Track({ reverse = false }: { reverse?: boolean }) {
         {items.map((s, i) => (
           <span
             key={i}
-            className="inline-flex items-center gap-2.5 mx-6 text-sm font-medium text-zinc-400 hover:text-zinc-700 transition-colors shrink-0"
+            className="inline-flex items-center gap-2.5 mx-6 text-sm font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors shrink-0"
           >
             <span className="w-1 h-1 rounded-full bg-sky-500/50 shrink-0" />
             {s}
@@ -29,7 +29,7 @@ function Track({ reverse = false }: { reverse?: boolean }) {
 
 export default function Marquee() {
   return (
-    <div className="select-none border-y border-zinc-200/80">
+    <div className="select-none border-y border-zinc-200/80 dark:border-zinc-800/60">
       <Track reverse={false} />
       <Track reverse={true} />
     </div>

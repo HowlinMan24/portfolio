@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 const links = [
   { href: "#about", label: "About" },
@@ -11,6 +12,32 @@ const links = [
   { href: "#contact", label: "Contact" },
 ];
 
+function ThemeToggle() {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return <div className="w-8 h-8" />;
+
+  const dark = theme === "dark";
+  return (
+    <button
+      onClick={() => setTheme(dark ? "light" : "dark")}
+      aria-label="Toggle theme"
+      className="flex items-center justify-center w-8 h-8 rounded-full text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-200"
+    >
+      {dark ? (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-4 h-4">
+          <circle cx="12" cy="12" r="4" /><path strokeLinecap="round" d="M12 2v2m0 16v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M2 12h2m16 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+      ) : (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-4 h-4">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      )}
+    </button>
+  );
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -20,12 +47,10 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 30);
-
       const doc = document.documentElement;
       const scrolled = doc.scrollTop || document.body.scrollTop;
       const total = doc.scrollHeight - doc.clientHeight;
       setProgress(total > 0 ? (scrolled / total) * 100 : 0);
-
       for (const l of [...links].reverse()) {
         const el = document.querySelector(l.href);
         if (el && el.getBoundingClientRect().top <= 120) {
@@ -50,7 +75,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/90 backdrop-blur-md border-b border-zinc-200/80 shadow-sm shadow-zinc-100"
+            ? "bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-zinc-200/80 dark:border-zinc-800/60 shadow-sm shadow-zinc-100 dark:shadow-zinc-900"
             : "bg-transparent"
         }`}
       >
@@ -63,7 +88,7 @@ export default function Navbar() {
                   className={`relative px-3 py-1.5 rounded-md transition-colors ${
                     active === l.href
                       ? "text-sky-500"
-                      : "text-zinc-500 hover:text-zinc-900"
+                      : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
                   }`}
                 >
                   {active === l.href && (
@@ -76,8 +101,9 @@ export default function Navbar() {
           </ul>
 
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <button
-              className="md:hidden p-2 text-zinc-500 hover:text-zinc-900 transition-colors"
+              className="md:hidden p-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
               aria-label="Open menu"
               onClick={() => setOpen((o) => !o)}
             >
@@ -97,7 +123,7 @@ export default function Navbar() {
         </nav>
 
         {open && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md border-b border-zinc-200 px-6 pb-5">
+          <div className="md:hidden bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 px-6 pb-5">
             <ul className="flex flex-col gap-1 text-sm font-medium">
               {links.map((l) => (
                 <li key={l.href}>
@@ -107,7 +133,7 @@ export default function Navbar() {
                     className={`block px-3 py-2 rounded-md transition-colors ${
                       active === l.href
                         ? "text-sky-500 bg-sky-500/8"
-                        : "text-zinc-500 hover:text-zinc-900"
+                        : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
                     }`}
                   >
                     {l.label}

@@ -21,7 +21,7 @@ export default function SectionHeader({ eyebrow, title }: Props) {
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-500 mb-3">
         {label}
       </p>
-      <h2 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900">
+      <h2 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
         {title}
       </h2>
       <div className="mt-4 h-px w-16 bg-gradient-to-r from-sky-500 to-transparent" />

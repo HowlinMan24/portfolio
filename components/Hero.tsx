@@ -49,7 +49,7 @@ export default function Hero() {
             </div>
             <div>
               <LineReveal delay={0.1}>
-                <span style={{ fontSize: "clamp(64px, 10vw, 160px)", WebkitTextStroke: "1.5px rgba(0,0,0,0.18)", color: "transparent" }}>
+                <span className="text-outline" style={{ fontSize: "clamp(64px, 10vw, 160px)" }}>
                   MIJALKOV
                 </span>
               </LineReveal>
@@ -89,7 +89,7 @@ export default function Hero() {
                   href={l.href}
                   target={l.href.startsWith("mailto") ? undefined : "_blank"}
                   rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full border border-zinc-300 bg-zinc-50 px-5 py-3 text-sm font-semibold text-zinc-600 hover:border-sky-500/50 hover:text-sky-500 hover:bg-sky-50 transition-all duration-300"
+                  className="inline-flex items-center rounded-full border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900/60 px-5 py-3 text-sm font-semibold text-zinc-600 dark:text-zinc-300 hover:border-sky-500/50 hover:text-sky-500 hover:bg-sky-50 dark:hover:bg-sky-500/10 transition-all duration-300"
                 >
                   {l.label}
                 </a>
@@ -105,7 +105,7 @@ export default function Hero() {
           transition={{ delay: 0.3, duration: 0.9, ease: EASE } as Transition}
           className="hidden md:flex flex-col justify-end items-end ml-12 shrink-0"
         >
-          <div className="relative w-64 lg:w-80 aspect-[3/4] rounded-2xl overflow-hidden border border-zinc-200">
+          <div className="relative w-64 lg:w-80 aspect-[3/4] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700/60">
             <Image
               src="/photo.jpg"
               alt="Hristijan Mijalkov"

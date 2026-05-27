@@ -10,7 +10,7 @@ export default function Skills() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader eyebrow="04 — Skills" title="What I work with" />
 
-        <div className="divide-y divide-zinc-200/80">
+        <div className="divide-y divide-zinc-200/80 dark:divide-zinc-800/60">
           {skillGroups.map((group, i) => (
             <motion.div
               key={group.label}
@@ -27,7 +27,7 @@ export default function Skills() {
                 {group.items.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-md border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-xs font-medium text-zinc-600 hover:border-sky-400/50 hover:text-sky-600 hover:bg-sky-50 transition-all duration-200"
+                    className="rounded-md border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 px-3 py-1.5 text-xs font-medium text-zinc-600 dark:text-zinc-300 hover:border-sky-400/50 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-sky-50 dark:hover:bg-sky-500/5 transition-all duration-200"
                   >
                     {skill}
                   </span>

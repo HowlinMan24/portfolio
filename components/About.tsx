@@ -24,7 +24,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="text-[1.05rem] leading-relaxed text-zinc-500"
+                className="text-[1.05rem] leading-relaxed text-zinc-500 dark:text-zinc-400"
               >
                 {p}
               </motion.p>
@@ -43,9 +43,9 @@ export default function About() {
               { label: "English", value: "C2 · German A2" },
               { label: "Based", value: "North Macedonia" },
             ].map((item) => (
-              <div key={item.label} className="border-t border-zinc-200 pt-3">
-                <p className="text-[10px] uppercase tracking-widest text-zinc-400 mb-0.5">{item.label}</p>
-                <p className="text-sm font-medium text-zinc-700">{item.value}</p>
+              <div key={item.label} className="border-t border-zinc-200 dark:border-zinc-800 pt-3">
+                <p className="text-[10px] uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-0.5">{item.label}</p>
+                <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{item.value}</p>
               </div>
             ))}
           </motion.div>

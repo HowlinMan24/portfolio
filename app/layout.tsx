@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import ThemeProvider from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const spaceGrotesk = Space_Grotesk({
@@ -33,8 +34,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-white text-zinc-900 font-sans antialiased">
-        {children}
+      <body className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans antialiased">
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -11,8 +11,8 @@ export const skillGroups: SkillGroup[] = [
   {
     label: "Web & APIs",
     items: [
-      "Angular", "NestJS", "Node.js", ".NET", "Spring Boot",
-      "HTML5", "CSS3", "Tailwind CSS", "REST APIs", "WebSockets", "Nginx",
+      "Spring Boot", "Angular", "NestJS", "Node.js", ".NET",
+      "HTML", "CSS", "Tailwind CSS", "REST APIs", "WebSockets", "Nginx",
     ],
   },
   {
@@ -36,9 +36,16 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
+    label: "Architecture",
+    items: [
+      "Microservices", "Multi-Tenant SaaS", "Event-Driven", "MVC", "REST APIs",
+      "ETL Pipelines", "Lambda Architecture", "Hexagonal/Clean Architecture",
+    ],
+  },
+  {
     label: "Tools",
     items: [
-      "SAP", "Hypatos", "Postman", "Jira", "Confluence",
+      "SAP", "Hypatos", "GitHub", "ClickUp", "Postman", "Jira", "Confluence",
       "GitLab", "OpenAI API", "Contentful",
     ],
   },

@@ -172,7 +172,7 @@ export default function CVPage() {
             Engineered a multi-tenant banking and e-commerce SaaS platform with microservices architecture handling KYC onboarding,
             FX wire transfers, and payment flows at Vista Point. Built predictive ML models and distributed PySpark pipelines (Lambda architecture)
             at Xient GmbH (Germany). Experienced designing <b>Microservices, Multi-Tenant SaaS, Event-Driven, and Lambda architectures</b>.
-            Proven across Angular, React, Node.js, Spring Boot, Python, PySpark, AWS, Java, SQL, NoSQL, JavaScript, CSS, and HTML.
+            Proven across Angular, React, Node.js, Spring Boot, FastAPI, Flask, Python, PySpark, AWS, Java, SQL, NoSQL, JavaScript, CSS, and HTML.
           </p>
         </div>
 

@@ -40,7 +40,7 @@ export default function About() {
           >
             {[
               { label: "Cert.", value: "AWS AI Practitioner" },
-              { label: "English", value: "C2 · German A2" },
+              { label: "English", value: "C1 · German A2" },
               { label: "Based", value: "North Macedonia" },
             ].map((item) => (
               <div key={item.label} className="border-t border-zinc-200 dark:border-zinc-800 pt-3">

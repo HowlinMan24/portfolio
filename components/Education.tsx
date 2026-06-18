@@ -37,6 +37,14 @@ const subjects = [
     desc: "Association rules, clustering, classification, and pattern recognition in large datasets.",
   },
   {
+    name: "Big Data Mining",
+    desc: "Distributed processing with Apache Spark, Flink, and Kafka, batch and streaming pipelines at scale.",
+  },
+  {
+    name: "DevOps Software Development",
+    desc: "CI/CD pipelines, infrastructure as code, containerisation, automated testing, and release management.",
+  },
+  {
     name: "Information Security",
     desc: "Cryptography, access control, network security, threat modelling, and compliance.",
   },
@@ -51,6 +59,10 @@ const subjects = [
   {
     name: "Bioinformatics",
     desc: "Biological sequence analysis, genomic data pipelines, and computational biology tools.",
+  },
+  {
+    name: "Computer Architecture",
+    desc: "CPU design, instruction sets, memory hierarchy, pipelining, and parallel processing.",
   },
 ];
 
@@ -121,7 +133,7 @@ export default function Education() {
         <div className="grid sm:grid-cols-2 gap-4">
           {[
             { label: "Certification", value: "AWS Certified AI Practitioner" },
-            { label: "Languages", value: "Macedonian (Native) · English (C2) · German (A2)" },
+            { label: "Languages", value: "Macedonian (Native) · English (C1) · German (A2)" },
           ].map((item, i) => (
             <motion.div
               key={item.label}

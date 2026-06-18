@@ -254,7 +254,7 @@ export default function CVPage() {
           </div>
           <div style={{ fontSize: "9pt", marginTop: "2px" }}>
             <span style={{ fontWeight: "bold", color: "#1B3A6B" }}>Languages:</span>{" "}
-            Macedonian (Native) · English (C2 Fluent) · German (A2)
+            Macedonian (Native) · English (C1) · German (A2)
           </div>
         </div>
 

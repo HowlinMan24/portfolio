@@ -42,14 +42,12 @@ export default function CVPage() {
       <head>
         <meta charSet="utf-8" />
         <title>Hristijan Mijalkov — CV</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
         <style>{`
           * { margin: 0; padding: 0; box-sizing: border-box; }
 
           body {
-            font-family: 'EB Garamond', Garamond, 'Times New Roman', serif;
-            font-size: 10.5pt;
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 9.5pt;
             color: #111;
             background: #fff;
             padding: 28px 40px;
@@ -60,10 +58,10 @@ export default function CVPage() {
 
           /* ── Header ── */
           .cv-name {
-            font-size: 26pt;
+            font-size: 22pt;
             font-weight: 700;
             text-align: center;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
             color: #1B3A6B;
             margin-bottom: 5px;
@@ -71,7 +69,7 @@ export default function CVPage() {
           }
           .cv-contact {
             text-align: center;
-            font-size: 9.5pt;
+            font-size: 8.5pt;
             color: #444;
             margin-bottom: 3px;
           }
@@ -89,10 +87,10 @@ export default function CVPage() {
             display: flex;
             align-items: center;
             gap: 7px;
-            font-size: 9.5pt;
-            font-weight: 600;
+            font-size: 8.5pt;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.13em;
+            letter-spacing: 0.1em;
             color: #1B3A6B;
             margin-bottom: 3px;
           }
@@ -114,33 +112,33 @@ export default function CVPage() {
           /* ── Job entries ── */
           .entry { margin-bottom: 9px; page-break-inside: avoid; break-inside: avoid; }
           .job-header { display: flex; justify-content: space-between; align-items: baseline; }
-          .job-company { font-weight: 700; font-size: 10.5pt; }
-          .job-location { font-size: 9.5pt; color: #444; font-style: italic; }
-          .job-role { font-style: italic; font-size: 10pt; }
-          .job-period { font-style: italic; font-size: 9.5pt; color: #444; }
+          .job-company { font-weight: 700; font-size: 9.5pt; }
+          .job-location { font-size: 8.5pt; color: #444; }
+          .job-role { font-style: italic; font-size: 9pt; }
+          .job-period { font-style: italic; font-size: 8.5pt; color: #444; }
 
-          ul { padding-left: 17px; margin-top: 4px; list-style-type: disc; }
+          ul { padding-left: 16px; margin-top: 3px; list-style-type: disc; }
           ul li { display: list-item; list-style-type: disc; list-style-position: outside; }
-          li { margin-bottom: 3px; font-size: 10pt; line-height: 1.45; }
+          li { margin-bottom: 2px; font-size: 9pt; line-height: 1.4; }
           b.num { color: #2a4f8f; }
 
           /* ── Skills ── */
-          .skill-row { margin-bottom: 3px; font-size: 10pt; }
-          .skill-label { font-weight: 600; color: #1B3A6B; }
+          .skill-row { margin-bottom: 3px; font-size: 9pt; }
+          .skill-label { font-weight: 700; color: #1B3A6B; }
 
           /* ── Projects ── */
           .proj-header { display: flex; justify-content: space-between; align-items: baseline; }
-          .proj-name { font-weight: 700; font-size: 10pt; }
-          .proj-repo { font-size: 9pt; color: #444; font-style: italic; }
-          .proj-tech { font-size: 9pt; color: #444; margin-top: 1px; margin-bottom: 2px; }
+          .proj-name { font-weight: 700; font-size: 9.5pt; }
+          .proj-repo { font-size: 8.5pt; color: #444; font-style: italic; }
+          .proj-tech { font-size: 8.5pt; color: #444; margin-top: 1px; margin-bottom: 2px; }
 
           /* ── Education ── */
           .edu-row { display: flex; justify-content: space-between; align-items: baseline; }
           .edu-inst { font-weight: 700; }
-          .edu-loc { font-size: 9.5pt; color: #444; font-style: italic; }
+          .edu-loc { font-size: 8.5pt; color: #444; }
 
           /* ── Summary ── */
-          .summary { font-size: 10pt; line-height: 1.5; }
+          .summary { font-size: 9pt; line-height: 1.5; }
 
           @media print {
             body { padding: 0; }

@@ -22,15 +22,15 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    role: "Data Scientist - SAP x Hypatos",
+    role: "Backend Engineer",
     company: "Xient GmbH",
-    location: "",
+    location: "Germany (Remote)",
     period: "Jun 2024 – Present",
-    tech: ["Python", "PySpark", "scikit-learn", "ETL", "SAP", "Hypatos"],
+    tech: ["FastAPI", "Python", "Go", "React", "Next.js", "Playwright", "SAP", "Ollama"],
     bullets: [
-      "Built classification, regression, and time-series forecasting models with scikit-learn on SAP ERP and Hypatos document-intelligence data, achieving ~15% improvement in accuracy for revenue, churn, and demand prediction across enterprise clients.",
-      "Designed distributed PySpark ETL pipelines (Lambda architecture: batch + streaming) integrating SAP ERP and Hypatos document-intelligence data, cutting manual data preparation time ~60% and surfacing decision-ready business insights.",
-      "Deployed 3 production ML models into the SAP x Hypatos ecosystem, collaborating with cross-functional teams in Germany to translate business requirements into measurable forecasting outputs.",
+      "Shipped a Microsoft Teams tab application (FastAPI, Python) embedding a BW/4HANA KPI dashboard as both a personal and channel tab, surfacing real-time business intelligence data directly within Teams.",
+      "Delivered a full-stack documentation PDF export tool (Go, React, Next.js, Python, Playwright) with BFS site crawling, per-section ZIP packaging, and SSE-streamed generation progress.",
+      "Wired an on-premise SAP S/4HANA + BW system to a locally-hosted LLM (Ollama on Nvidia DGX Spark) via RFC/BAPI and OData; built Python extraction pipelines enabling zero-cloud AI-powered data analysis.",
     ],
   },
   {

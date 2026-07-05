@@ -168,8 +168,8 @@ export default function CVPage() {
           <p className="summary">
             Full-stack engineer and data scientist with <b>4+ years</b> shipping production systems in <b>fintech, e-commerce, and ML</b>.
             Engineered a multi-tenant banking and e-commerce SaaS platform with microservices architecture handling KYC onboarding,
-            FX wire transfers, and payment flows at Vista Point. Built predictive ML models and distributed PySpark pipelines (Lambda architecture)
-            at Xient GmbH (Germany). Experienced designing <b>Microservices, Multi-Tenant SaaS, Event-Driven, and Lambda architectures</b>.
+            FX wire transfers, and payment flows at Vista Point. Built AI-integrated backend tools and a real-time BI dashboard
+            for Microsoft Teams at Xient GmbH (Germany). Experienced designing <b>Microservices, Multi-Tenant SaaS, Event-Driven, and Lambda architectures</b>.
             Proven across Angular, React, Node.js, Spring Boot, FastAPI, Flask, Python, PySpark, AWS, Java, SQL, NoSQL, JavaScript, CSS, and HTML.
           </p>
         </div>

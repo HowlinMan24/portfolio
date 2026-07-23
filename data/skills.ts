@@ -6,7 +6,7 @@ export interface SkillGroup {
 export const skillGroups: SkillGroup[] = [
   {
     label: "Languages",
-    items: ["Python", "TypeScript", "JavaScript", "Java", "C#", "C/C++", "SQL", "PHP", "Bash/Shell"],
+    items: ["Python", "Go", "TypeScript", "JavaScript", "Java", "C#", "C/C++", "SQL", "PHP", "Bash/Shell"],
   },
   {
     label: "Web & APIs",
@@ -25,14 +25,14 @@ export const skillGroups: SkillGroup[] = [
     items: [
       "PySpark", "Apache Spark", "Apache Flink", "Kafka",
       "scikit-learn", "Pandas", "Matplotlib", "Seaborn",
-      "Deep Learning", "Data Mining", "ETL", "MLOps", "Databricks",
+      "Deep Learning", "LLMs", "RAG", "Data Mining", "ETL", "MLOps", "Databricks",
       "Statistics", "Data Visualization", "Bioinformatics",
     ],
   },
   {
     label: "Cloud & DevOps",
     items: [
-      "AWS (S3, EC2, IAM, CloudFront)", "Docker", "Kubernetes",
+      "AWS (S3, EC2, IAM, CloudFront, Lambda)", "Docker", "Kubernetes",
       "CI/CD", "Jenkins", "Git", "GitHub", "Linux/Unix", "SSH",
     ],
   },
@@ -47,7 +47,7 @@ export const skillGroups: SkillGroup[] = [
     label: "Tools",
     items: [
       "SAP", "Hypatos", "GitHub", "ClickUp", "Postman", "Jira", "Confluence",
-      "GitLab", "OpenAI API", "Contentful",
+      "GitLab", "Bitbucket", "OpenAI API", "Contentful",
     ],
   },
 ];

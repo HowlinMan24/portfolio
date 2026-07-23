@@ -3,35 +3,19 @@ import { skillGroups } from "@/data/skills";
 
 const highlightProjects = [
   {
-    name: "KYC Verification Microservice",
-    repo: "github.com/HowlinMan24/kyc-service",
-    tech: "TypeScript · NestJS · JWT · Sequelize · Zod · Docker · OpenAPI",
+    name: "Student Grading App with LLMs",
+    repo: "github.com/HowlinMan24/Student-Grading-App-with-LLMs",
+    tech: "Spring Boot · Angular · MySQL · JWT · Docker · OpenAI API",
     bullets: [
-      "Production-grade KYC microservice (Hexagonal/Clean Architecture) with Zod request validation, Sequelize ORM, JWT auth, and full OpenAPI documentation — mirrors the identity verification flows built at Vista Point.",
+      "LLM-powered grading platform (Spring Boot, Angular, MySQL) automating student submission evaluation via the OpenAI API, with JWT-secured auth and Dockerized deployment.",
     ],
   },
   {
-    name: "Diabetes ML Streaming Pipeline",
-    repo: "github.com/HowlinMan24/diabetes-ml-streaming",
-    tech: "Python · PySpark · Kafka · Docker · scikit-learn",
+    name: "DAWN — Bilingual Teaching Platform",
+    repo: "In development · private repo",
+    tech: "Go · Angular · PostgreSQL",
     bullets: [
-      "End-to-end Lambda architecture ML pipeline: offline Spark model training + real-time inference via Kafka streaming producer/consumer — demonstrates full production ML lifecycle from training to deployment.",
-    ],
-  },
-  {
-    name: "CP-ABE Secure File Sharing",
-    repo: "github.com/HowlinMan24/cpabe-secure-share",
-    tech: "Python · CP-ABE (BSW07) · AES-256-GCM · Docker",
-    bullets: [
-      "Attribute-based encryption system combining CP-ABE policy enforcement with AES-256-GCM hybrid encryption for secure, access-policy-controlled file sharing.",
-    ],
-  },
-  {
-    name: "Calendar SaaS App",
-    repo: "github.com/HowlinMan24/CalendarWebApp",
-    tech: "Angular · NestJS · MySQL · Docker · Nginx",
-    bullets: [
-      "Full-stack multi-calendar SaaS web app (Multi-Layered MVC, REST API) with reusable Angular month/week/day views, NestJS REST API, MySQL persistence, and Dockerized deployment with Nginx for dev/prod.",
+      "Solo-built bilingual (EN/MK) teaching platform for coding and economics: Go backend with a Postgres-backed schema, Angular SSR/SSG frontend for public content — actively in development.",
     ],
   },
 ];
@@ -166,11 +150,11 @@ export default function CVPage() {
           <div className="section-title">Professional Summary</div>
           <hr className="section-rule" />
           <p className="summary">
-            Full-stack engineer and data scientist with <b>4+ years</b> shipping production systems in <b>fintech, e-commerce, and ML</b>.
+            Full-stack engineer and data scientist with <b>5+ years</b> shipping production systems in <b>fintech, e-commerce, and ML</b>.
             Engineered a multi-tenant banking and e-commerce SaaS platform with microservices architecture handling KYC onboarding,
             FX wire transfers, and payment flows at Vista Point. Built AI-integrated backend tools and a real-time BI dashboard
             for Microsoft Teams at Xient GmbH (Germany). Experienced designing <b>Microservices, Multi-Tenant SaaS, Event-Driven, and Lambda architectures</b>.
-            Proven across Angular, React, Node.js, Spring Boot, FastAPI, Flask, Python, PySpark, AWS, Java, SQL, NoSQL, JavaScript, CSS, and HTML.
+            Proven across Angular, Node.js, Go, FastAPI, Flask, Python, PySpark, AWS, SQL, NoSQL, JavaScript, CSS, and HTML.
           </p>
         </div>
 
@@ -243,6 +227,7 @@ export default function CVPage() {
               <span className="edu-loc">Skopje, North Macedonia</span>
             </div>
             <div style={{ fontStyle: "italic", fontSize: "9pt" }}>B.Sc. Software Engineering &amp; Information Systems</div>
+            <div style={{ fontSize: "8.5pt", color: "#444" }}>GPA: 3.4/4.0</div>
           </div>
           <div className="entry" style={{ marginBottom: "4px" }}>
             <div className="edu-row">

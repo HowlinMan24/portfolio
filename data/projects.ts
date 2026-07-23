@@ -38,6 +38,16 @@ export const projects: Project[] = [
 
   // ── Auto-imported from GitHub ────────────────────────────────────────────────
   {
+    name: "Go Notes API + Next.js Frontend", // auto
+    description:
+      "Full-stack notes application: layered-architecture Go REST API (JWT auth, bcrypt password hashing, MySQL) paired with a Next.js frontend.",
+    category: "Web", // auto — Go REST API + Next.js frontend
+    tech: ["Go", "Next.js", "TypeScript", "MySQL", "JWT"],
+    repoUrl: "https://github.com/HowlinMan24/LearningGOAndReact",
+    updatedAt: "2026-07-14",
+    highlight: true,
+  },
+  {
     name: "cpabe-secure-share", // auto
     description:
       "Secure file sharing using CP-ABE (BSW07) with hybrid AES-256-GCM encryption — university Data Security project.",
@@ -128,6 +138,15 @@ export const projects: Project[] = [
 
   // ── Newly pushed from local ─────────────────────────────────────────────────
   {
+    name: "DAWN — Bilingual Teaching Platform",
+    description:
+      "Solo-built bilingual (EN/MK) teaching platform for coding and economics, from scratch. Go backend (Postgres), Angular SSR/SSG frontend. Actively in development — private repo, no public link yet.",
+    category: "Web",
+    secondaryTags: ["EdTech"],
+    tech: ["Go", "Angular", "PostgreSQL"],
+    updatedAt: "2026-07-23",
+  },
+  {
     name: "Treatment Pathway Analysis",
     description:
       "Sequence mining and ML pipeline for diabetes treatment pathway analysis. EDA, preprocessing, and pattern extraction on real clinical data.",
@@ -169,10 +188,10 @@ export const projects: Project[] = [
     updatedAt: "2025-01-19",
   },
   {
-    name: "System Design Notes",
+    name: "Architecture & System Designs",
     description:
-      "Architecture patterns from monolith to event-driven and AWS systems — each with Mermaid diagrams, trade-off analysis, and when-to-use guidance.",
-    category: "Other",
+      "Architecture patterns from monolith to event-driven and AWS systems - each with Mermaid diagrams, trade-off analysis, and when-to-use guidance.",
+    category: "OS/Systems",
     tech: ["System Design", "AWS", "Microservices", "CQRS", "Event-Driven"],
     repoUrl: "https://github.com/HowlinMan24/system-design",
     updatedAt: "2026-05-27",

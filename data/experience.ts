@@ -26,7 +26,7 @@ export const experience: ExperienceItem[] = [
     company: "Xient GmbH",
     location: "Germany (Remote)",
     period: "Jun 2024 – Present",
-    tech: ["FastAPI", "Python", "Go", "React", "Next.js", "Playwright", "SAP", "Ollama"],
+    tech: ["FastAPI", "Python", "Go", "AWS", "React", "Next.js", "Playwright", "SAP", "Ollama"],
     bullets: [
       "Shipped a Microsoft Teams tab application (FastAPI, Python) embedding a BW/4HANA KPI dashboard as both a personal and channel tab, surfacing real-time business intelligence data directly within Teams.",
       "Delivered a full-stack documentation PDF export tool (Go, React, Next.js, Python, Playwright) with BFS site crawling, per-section ZIP packaging, and SSE-streamed generation progress.",
@@ -52,7 +52,7 @@ export const experience: ExperienceItem[] = [
     tech: ["Angular", "Node.js", "HTML", "CSS", "JavaScript", "PHP", "Python", "Pandas", "SQL"],
     bullets: [
       "Delivered 2 production websites end-to-end (solar energy provider, PVC construction company) covering requirements, UI/UX, full-stack development (HTML, CSS, JavaScript, PHP), and deployment, enabling clients with no prior web presence to generate online leads.",
-      "Taught web development (Angular, Node.js, HTML/CSS/JS) and data science (Python, Pandas, SQL, ML, Deep Learning) across 1-on-1 and small-group sessions, adapting curriculum to individual skill levels.",
+      "Taught web development (Angular, Node.js, HTML/CSS/JS) and data science (Python, Pandas, SQL, ML, Deep Learning, LLMs, RAG systems) across 1-on-1 and small-group sessions, adapting curriculum to individual skill levels.",
     ],
   },
   {

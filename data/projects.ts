@@ -1,4 +1,4 @@
-export type Category = "Web" | "AI" | "ML" | "Data" | "OS/Systems" | "Other";
+export type Category = "Web" | "AI" | "ML" | "Data" | "OS/Systems" | "Cloud" | "Other";
 
 export interface Project {
   name: string;
@@ -255,7 +255,7 @@ export const projects: Project[] = [
     name: "AWS VPC Foundation", // auto
     description:
       "Reusable, secure-by-default multi-AZ VPC Terraform module for AWS with private subnets that have no route to the internet, plus a minimal EC2 instance proving it works.",
-    category: "OS/Systems", // auto — Terraform/HCL + AWS infra
+    category: "Cloud", // auto — Terraform/HCL + AWS infra
     tech: ["Terraform", "HCL", "AWS", "VPC", "EC2"],
     repoUrl: "https://github.com/HowlinMan24/aws-vpc-foundation",
     updatedAt: "2026-08-03",
@@ -265,7 +265,7 @@ export const projects: Project[] = [
     name: "Terraform CI/CD Pipeline", // auto
     description:
       "GitHub Actions pipeline for Terraform: every PR gets a plan, format check, and security scan; merging to main auto-deploys dev and requires human approval before touching prod, authenticating via separate OIDC roles instead of long-lived keys.",
-    category: "OS/Systems", // auto — Terraform/HCL + CI/CD
+    category: "Cloud", // auto — Terraform/HCL + CI/CD
     tech: ["Terraform", "HCL", "GitHub Actions", "AWS", "OIDC", "Checkov"],
     repoUrl: "https://github.com/HowlinMan24/terraform-cicd-pipeline",
     updatedAt: "2026-08-03",
@@ -275,7 +275,7 @@ export const projects: Project[] = [
     name: "Serverless Observability Stack", // auto
     description:
       "Serverless items API (API Gateway to Lambda to DynamoDB) with a full observability layer on top: a CloudWatch dashboard, percentage-based metric-math alarms, and SNS email alerting.",
-    category: "OS/Systems", // auto — Terraform/HCL + AWS serverless
+    category: "Cloud", // auto — Terraform/HCL + AWS serverless
     secondaryTags: ["Observability"],
     tech: ["Terraform", "AWS Lambda", "API Gateway", "DynamoDB", "CloudWatch", "SNS"],
     repoUrl: "https://github.com/HowlinMan24/serverless-observability-stack",

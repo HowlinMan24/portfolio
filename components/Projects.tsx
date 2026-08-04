@@ -5,7 +5,7 @@ import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motio
 import { projects, type Category } from "@/data/projects";
 import SectionHeader from "./SectionHeader";
 
-const CATEGORIES: Array<Category | "All"> = ["All", "Web", "AI", "ML", "Data", "OS/Systems", "Other"];
+const CATEGORIES: Array<Category | "All"> = ["All", "Web", "AI", "ML", "Data", "Cloud", "OS/Systems", "Other"];
 const INITIAL_SHOW = 6;
 
 const sorted = [...projects].sort(
@@ -17,18 +17,19 @@ const categoryGradients: Record<string, string> = {
   AI:           "from-violet-100 to-purple-100",
   ML:           "from-emerald-100 to-teal-100",
   Data:         "from-amber-100 to-orange-100",
+  Cloud:        "from-cyan-100 to-sky-100",
   "OS/Systems": "from-rose-100 to-red-100",
   Other:        "from-zinc-100 to-zinc-200",
 };
 
 const categoryDot: Record<string, string> = {
   Web: "bg-blue-400", AI: "bg-violet-400", ML: "bg-emerald-400",
-  Data: "bg-amber-400", "OS/Systems": "bg-rose-400", Other: "bg-zinc-400",
+  Data: "bg-amber-400", Cloud: "bg-cyan-400", "OS/Systems": "bg-rose-400", Other: "bg-zinc-400",
 };
 
 const categoryText: Record<string, string> = {
   Web: "text-blue-600", AI: "text-violet-600", ML: "text-emerald-600",
-  Data: "text-amber-600", "OS/Systems": "text-rose-600", Other: "text-zinc-500",
+  Data: "text-amber-600", Cloud: "text-cyan-600", "OS/Systems": "text-rose-600", Other: "text-zinc-500",
 };
 
 interface ProjectRowProps {

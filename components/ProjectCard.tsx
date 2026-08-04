@@ -17,6 +17,10 @@ const categoryStyles: Record<string, { badge: string; dot: string }> = {
     badge: "bg-amber-500/10 text-amber-400 border-amber-500/20",
     dot: "bg-amber-400",
   },
+  Cloud: {
+    badge: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+    dot: "bg-cyan-400",
+  },
   "OS/Systems": {
     badge: "bg-rose-500/10 text-rose-400 border-rose-500/20",
     dot: "bg-rose-400",

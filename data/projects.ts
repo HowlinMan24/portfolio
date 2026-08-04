@@ -207,4 +207,79 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/HowlinMan24/flink-streaming",
     updatedAt: "2025-05-24",
   },
+
+  // ── Auto-imported from GitHub (new) ──────────────────────────────────────────
+  {
+    name: "SAP LLM Connector", // auto
+    description:
+      "Scripts that pull data out of an on-premise SAP system (S/4HANA and/or BW-on-HANA) and hand a pandas-summarized version to a local Ollama LLM for analysis, so no SAP data ever leaves the network.",
+    category: "AI", // auto — on-prem LLM + SAP integration
+    secondaryTags: ["Fintech"],
+    tech: ["Python", "SAP", "Ollama", "RFC/BAPI", "Pandas"],
+    repoUrl: "https://github.com/HowlinMan24/sap-llm-connector",
+    updatedAt: "2026-07-30",
+    highlight: true,
+  },
+  {
+    name: "Multi-Format RAG Pipeline", // auto
+    description:
+      "Retrieval pipeline for mixed-format documentation (docx, xlsx, pdf) feeding a local Ollama LLM, plus a tool-calling agent loop combining retrieval with live read-only queries against a real backend system (SAP).",
+    category: "AI", // auto — RAG + LLMs + Python
+    secondaryTags: ["RAG"],
+    tech: ["Python", "RAG", "Ollama", "LLMs", "SAP"],
+    repoUrl: "https://github.com/HowlinMan24/multiformat-rag-pipeline",
+    updatedAt: "2026-07-30",
+    highlight: true,
+  },
+  {
+    name: "RAG-Anything Evaluation", // auto
+    description:
+      "On-prem evaluation of the knowledge-graph RAG library RAG-Anything against a simpler ChromaDB-based retrieval pipeline, plus a from-scratch cross-encoder reranker built to close a retrieval-quality gap found along the way.",
+    category: "AI", // auto — RAG + LLMs + Python
+    secondaryTags: ["RAG"],
+    tech: ["Python", "RAG", "ChromaDB", "Ollama", "Reranking"],
+    repoUrl: "https://github.com/HowlinMan24/rag-anything-eval",
+    updatedAt: "2026-07-30",
+    highlight: true,
+  },
+  {
+    name: "LLM Fine-Tuning Demo", // auto
+    description:
+      "QLoRA fine-tuning demonstration using a deliberately fictional company so any correct answer from the fine-tuned model is unambiguous proof the fine-tuning worked, isolated from base-model knowledge leakage.",
+    category: "AI", // auto — fine-tuning + LLMs + Python
+    tech: ["Python", "QLoRA", "Fine-tuning", "LLMs"],
+    repoUrl: "https://github.com/HowlinMan24/llm-finetuning-demo",
+    updatedAt: "2026-07-30",
+  },
+  {
+    name: "AWS VPC Foundation", // auto
+    description:
+      "Reusable, secure-by-default multi-AZ VPC Terraform module for AWS with private subnets that have no route to the internet, plus a minimal EC2 instance proving it works.",
+    category: "OS/Systems", // auto — Terraform/HCL + AWS infra
+    tech: ["Terraform", "HCL", "AWS", "VPC", "EC2"],
+    repoUrl: "https://github.com/HowlinMan24/aws-vpc-foundation",
+    updatedAt: "2026-08-03",
+    highlight: true,
+  },
+  {
+    name: "Terraform CI/CD Pipeline", // auto
+    description:
+      "GitHub Actions pipeline for Terraform: every PR gets a plan, format check, and security scan; merging to main auto-deploys dev and requires human approval before touching prod, authenticating via separate OIDC roles instead of long-lived keys.",
+    category: "OS/Systems", // auto — Terraform/HCL + CI/CD
+    tech: ["Terraform", "HCL", "GitHub Actions", "AWS", "OIDC", "Checkov"],
+    repoUrl: "https://github.com/HowlinMan24/terraform-cicd-pipeline",
+    updatedAt: "2026-08-03",
+    highlight: true,
+  },
+  {
+    name: "Serverless Observability Stack", // auto
+    description:
+      "Serverless items API (API Gateway to Lambda to DynamoDB) with a full observability layer on top: a CloudWatch dashboard, percentage-based metric-math alarms, and SNS email alerting.",
+    category: "OS/Systems", // auto — Terraform/HCL + AWS serverless
+    secondaryTags: ["Observability"],
+    tech: ["Terraform", "AWS Lambda", "API Gateway", "DynamoDB", "CloudWatch", "SNS"],
+    repoUrl: "https://github.com/HowlinMan24/serverless-observability-stack",
+    updatedAt: "2026-08-04",
+    highlight: true,
+  },
 ];

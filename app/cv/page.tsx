@@ -150,11 +150,11 @@ export default function CVPage() {
           <div className="section-title">Professional Summary</div>
           <hr className="section-rule" />
           <p className="summary">
-            Full-stack engineer and data scientist with <b>5+ years</b> shipping production systems in <b>fintech, e-commerce, and ML</b>.
-            Engineered a multi-tenant banking and e-commerce SaaS platform with microservices architecture handling KYC onboarding,
+            Full-stack engineer and data scientist with <b>5+ years</b> shipping production systems in <b>fintech and ML</b>.
+            Engineered a multi-tenant banking SaaS platform with microservices architecture handling KYC onboarding,
             FX wire transfers, and payment flows at Vista Point. Built AI-integrated backend tools and a real-time BI dashboard
-            for Microsoft Teams at Xient GmbH (Germany). Experienced designing <b>Microservices, Multi-Tenant SaaS, Event-Driven, and Lambda architectures</b>.
-            Proven across Angular, Node.js, Go, FastAPI, Flask, Python, PySpark, AWS, SQL, NoSQL, JavaScript, CSS, and HTML.
+            for Microsoft Teams at Xient GmbH (Germany). Founded <b>DAWN</b>, a bilingual (EN/MK) teaching platform for coding and economics.
+            Proven across Angular, Node.js, Go, FastAPI, Flask, Python, PySpark, AWS, SQL, NoSQL, JavaScript, CSS, HTML, OpenAPI, and Terraform.
           </p>
         </div>
 
@@ -227,11 +227,10 @@ export default function CVPage() {
               <span className="edu-loc">Skopje, North Macedonia</span>
             </div>
             <div style={{ fontStyle: "italic", fontSize: "9pt" }}>B.Sc. Software Engineering &amp; Information Systems</div>
-            <div style={{ fontSize: "8.5pt", color: "#444" }}>GPA: 3.4/4.0</div>
           </div>
           <div className="entry" style={{ marginBottom: "4px" }}>
             <div className="edu-row">
-              <span style={{ fontWeight: "bold" }}>AWS Certified AI Practitioner</span>
+              <span style={{ fontWeight: "bold" }}>AWS Certified Cloud Practitioner</span>
               <span className="edu-loc">Amazon Web Services</span>
             </div>
           </div>

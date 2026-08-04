@@ -9,39 +9,41 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
+    role: "Founder",
+    company: "DAWN",
+    location: "North Macedonia (Remote)",
+    period: "Jul 2026 – Present",
+    tech: ["Go", "Angular", "PostgreSQL", "Terraform", "SSR/SSG"],
+    bullets: [
+      "Founded and solo-built DAWN, a bilingual (EN/MK) teaching platform for coding and economics, from system design through deployment.",
+      "Built a Go REST backend on a Postgres-backed schema paired with an Angular SSR/SSG frontend, optimizing public content for SEO and fast first-load performance.",
+      "Own the full product lifecycle as sole engineer - architecture, curriculum content structure, and infrastructure as code (Terraform) - actively building pre-launch.",
+    ],
+  },
+  {
     role: "Senior Full-stack Developer",
     company: "Vista Point",
     location: "North Macedonia",
     period: "May 2022 – Present",
     tech: ["Angular", "Node.js", "MySQL", "Redis", "JWT", "Docker", "Java", "C#", "HTML", "CSS", "JavaScript"],
     bullets: [
-      "Engineered a multi-tenant banking and e-commerce SaaS platform with microservices architecture (Angular, Node.js, MySQL, Redis, Java, C#, HTML, CSS, JavaScript) handling KYC onboarding, cross-border wire transfers, and FX trading.",
+      "Engineered a multi-tenant banking SaaS platform with microservices architecture (Angular, Node.js, MySQL, Redis, Java, C#, HTML, CSS, JavaScript) handling KYC onboarding, cross-border wire transfers, and FX trading.",
       "Cut feature delivery time ~40% by refactoring a monolithic Angular codebase into a reusable component library, eliminating duplicated logic across KYC, wire-transfer, and FX trade screens.",
       "Secured REST API endpoints covering compliance-sensitive operations - identity verification, fund transfers, and role management - by implementing JWT auth and refresh-token rotation.",
       "Reduced high-traffic endpoint response times ~35% by introducing Redis read-through caching and rewriting inefficient MySQL queries, improving throughput under peak transaction load.",
     ],
   },
   {
-    role: "Backend Engineer",
+    role: "Backend and AI Engineer",
     company: "Xient GmbH",
     location: "Germany (Remote)",
     period: "Jun 2024 – Present",
-    tech: ["FastAPI", "Python", "Go", "AWS", "React", "Next.js", "Playwright", "SAP", "Ollama"],
+    tech: ["FastAPI", "Python", "Go", "AWS", "React", "Next.js", "Playwright", "SAP", "Ollama", "RAG"],
     bullets: [
       "Shipped a Microsoft Teams tab application (FastAPI, Python) embedding a BW/4HANA KPI dashboard as both a personal and channel tab, surfacing real-time business intelligence data directly within Teams.",
       "Delivered a full-stack documentation PDF export tool (Go, React, Next.js, Python, Playwright) with BFS site crawling, per-section ZIP packaging, and SSE-streamed generation progress.",
       "Wired an on-premise SAP S/4HANA + BW system to a locally-hosted LLM (Ollama on Nvidia DGX Spark) via RFC/BAPI and OData; built Python extraction pipelines enabling zero-cloud AI-powered data analysis.",
-    ],
-  },
-  {
-    role: "Volunteer Developer",
-    company: "Support Kocani",
-    location: "North Macedonia",
-    period: "Mar 2025 – Apr 2025",
-    tech: ["PHP", "Laravel", "AWS", "OpenAI API", "Python"],
-    bullets: [
-      "Designed and shipped supportkocani.com (PHP/Laravel, AWS) within 72 hours of the Kocani disco fire, enabling real-time donation tracking for hundreds of affected families.",
-      "Integrated OpenAI Vision API to automatically parse wire-transfer and cheque screenshots, eliminating ~4 hours of daily manual donation tallying and accelerating fund distribution to injured victims.",
+      "Built a multi-format (docx/xlsx/pdf) RAG pipeline with a tool-calling agent loop combining document retrieval and live SAP queries; evaluated a knowledge-graph RAG approach against a ChromaDB baseline and shipped a from-scratch cross-encoder reranker to close a retrieval-quality gap, entirely on-prem via local Ollama models.",
     ],
   },
   {

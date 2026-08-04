@@ -95,7 +95,7 @@ export default function Education() {
             <h3 className="font-display text-xl font-semibold text-zinc-900 dark:text-zinc-100 mb-1">
               Faculty of Computer Science and Engineering (FINKI), UKIM
             </h3>
-            <p className="text-sm text-zinc-400 dark:text-zinc-500">Skopje, North Macedonia · GPA: 3.4/4.0</p>
+            <p className="text-sm text-zinc-400 dark:text-zinc-500">Skopje, North Macedonia</p>
           </div>
           <span className="shrink-0 self-start rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 px-3 py-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
             Graduated
@@ -132,7 +132,7 @@ export default function Education() {
         {/* Cert + Languages */}
         <div className="grid sm:grid-cols-2 gap-4">
           {[
-            { label: "Certification", value: "AWS Certified AI Practitioner" },
+            { label: "Certification", value: "AWS Certified Cloud Practitioner" },
             { label: "Languages", value: "Macedonian (Native) · English (C1) · German (A2)" },
           ].map((item, i) => (
             <motion.div

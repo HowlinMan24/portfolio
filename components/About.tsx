@@ -5,8 +5,8 @@ import SectionHeader from "./SectionHeader";
 import Marquee from "./Marquee";
 
 const paras = [
-  "Full-stack engineer and data scientist with 5+ years of production experience in fintech, e-commerce, and ML — shipping a live banking platform, enterprise forecasting models, and distributed data pipelines for clients across Europe, alongside freelance web development and volunteer disaster-relief tooling on the side.",
-  "At Vista Point I engineer a multi-tenant banking and e-commerce SaaS platform with microservices architecture: Angular frontends, NestJS REST APIs, and MySQL/Redis backends handling KYC onboarding, cross-border wire transfers, and FX trading under compliance constraints. At Xient GmbH I build classification, regression, and time-series forecasting models alongside PySpark ETL pipelines (Lambda architecture: batch + streaming) within the SAP × Hypatos document-intelligence ecosystem, turning multi-source enterprise data into decision-ready forecasts.",
+  "Full-stack engineer and data scientist with 5+ years of production experience in fintech and ML — shipping a live banking platform, enterprise forecasting models, and distributed data pipelines for clients across Europe, alongside freelance web development and volunteer disaster-relief tooling on the side.",
+  "At Vista Point I engineer a multi-tenant banking SaaS platform with microservices architecture: Angular frontends, NestJS REST APIs, and MySQL/Redis backends handling KYC onboarding, cross-border wire transfers, and FX trading under compliance constraints. At Xient GmbH I build classification, regression, and time-series forecasting models alongside PySpark ETL pipelines (Lambda architecture: batch + streaming) within the SAP × Hypatos document-intelligence ecosystem, turning multi-source enterprise data into decision-ready forecasts.",
   "Experienced designing Microservices, Multi-Tenant SaaS, Event-Driven, and Lambda architectures. Proven across Angular, Node.js, Go, FastAPI, Flask, Python, PySpark, AWS, SQL, and NoSQL. Drawn to fintech, fraud detection, and the intersection of data engineering and applied security.",
 ];
 
@@ -39,7 +39,7 @@ export default function About() {
             className="flex flex-col gap-3 min-w-[200px]"
           >
             {[
-              { label: "Cert.", value: "AWS AI Practitioner" },
+              { label: "Cert.", value: "AWS Cloud Practitioner" },
               { label: "English", value: "C1 · German A2" },
               { label: "Based", value: "North Macedonia" },
             ].map((item) => (

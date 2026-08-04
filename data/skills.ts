@@ -6,14 +6,14 @@ export interface SkillGroup {
 export const skillGroups: SkillGroup[] = [
   {
     label: "Languages",
-    items: ["Python", "Go", "TypeScript", "JavaScript", "Java", "C#", "C/C++", "SQL", "PHP", "Bash/Shell"],
+    items: ["Python", "Go", "TypeScript", "JavaScript", "Java", "C#", "C/C++", "SQL", "PHP", "Bash/Shell", "HCL"],
   },
   {
     label: "Web & APIs",
     items: [
       "Spring Boot", "Angular", "NestJS", "Node.js", ".NET",
       "FastAPI", "Flask",
-      "HTML", "CSS", "Tailwind CSS", "REST APIs", "WebSockets", "Nginx",
+      "HTML", "CSS", "Tailwind CSS", "REST APIs", "OpenAPI", "WebSockets", "Nginx", "SEO",
     ],
   },
   {
@@ -32,7 +32,7 @@ export const skillGroups: SkillGroup[] = [
   {
     label: "Cloud & DevOps",
     items: [
-      "AWS (S3, EC2, IAM, CloudFront, Lambda)", "Docker", "Kubernetes",
+      "AWS (S3, EC2, IAM, CloudFront, Lambda, ELB)", "Terraform", "Docker", "Kubernetes",
       "CI/CD", "Jenkins", "Git", "GitHub", "Linux/Unix", "SSH",
     ],
   },

@@ -149,13 +149,11 @@ export default function CVPage() {
         <div className="section">
           <div className="section-title">Professional Summary</div>
           <hr className="section-rule" />
-          <p className="summary">
-            Full-stack engineer and data scientist with <b>5+ years</b> shipping production systems in <b>fintech and ML</b>.
-            Engineered a multi-tenant banking SaaS platform with microservices architecture handling KYC onboarding,
-            FX wire transfers, and payment flows at Vista Point. Built AI-integrated backend tools and a real-time BI dashboard
-            for Microsoft Teams at Xient GmbH (Germany). Founded <b>DAWN</b>, a bilingual (EN/MK) teaching platform for coding and economics.
-            Proven across Angular, Node.js, Go, FastAPI, Flask, Python, PySpark, AWS, SQL, NoSQL, JavaScript, CSS, HTML, OpenAPI, and Terraform.
-          </p>
+          <ul className="summary">
+            <li>5+ years shipping production systems across fintech and enterprise software.</li>
+            <li>Founded DAWN, a bilingual (EN/MK) teaching platform for coding and economics.</li>
+            <li>Core stack: Angular · Node.js · Go · AWS · SQL · JavaScript · HTML · CSS · OpenAPI · Terraform.</li>
+          </ul>
         </div>
 
         {/* ── Work Experience ── */}
@@ -227,12 +225,6 @@ export default function CVPage() {
               <span className="edu-loc">Skopje, North Macedonia</span>
             </div>
             <div style={{ fontStyle: "italic", fontSize: "9pt" }}>B.Sc. Software Engineering &amp; Information Systems</div>
-          </div>
-          <div className="entry" style={{ marginBottom: "4px" }}>
-            <div className="edu-row">
-              <span style={{ fontWeight: "bold" }}>AWS Certified Cloud Practitioner</span>
-              <span className="edu-loc">Amazon Web Services</span>
-            </div>
           </div>
           <div style={{ fontSize: "9pt", marginTop: "2px" }}>
             <span style={{ fontWeight: "bold", color: "#1B3A6B" }}>Languages:</span>{" "}

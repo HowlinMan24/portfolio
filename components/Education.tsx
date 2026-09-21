@@ -132,7 +132,6 @@ export default function Education() {
         {/* Cert + Languages */}
         <div className="grid sm:grid-cols-2 gap-4">
           {[
-            { label: "Certification", value: "AWS Certified Cloud Practitioner" },
             { label: "Languages", value: "Macedonian (Native) · English (C1) · German (A2)" },
           ].map((item, i) => (
             <motion.div

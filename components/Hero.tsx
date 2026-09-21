@@ -59,7 +59,7 @@ export default function Hero() {
           <div className="mb-8">
             <LineReveal delay={0.22}>
               <span className="text-lg sm:text-xl text-zinc-500 font-medium block">
-                Full-stack Engineer &amp; Data Scientist
+                Full-stack &amp; AI Engineer
               </span>
             </LineReveal>
           </div>

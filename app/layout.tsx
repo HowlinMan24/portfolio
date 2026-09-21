@@ -10,20 +10,20 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Hristijan Mijalkov — Full-stack Engineer & Data Scientist",
+  title: "Hristijan Mijalkov — Full-stack & AI Engineer",
   description:
-    "Portfolio of Hristijan Mijalkov — full-stack engineer and data scientist building production web apps and end-to-end ML pipelines.",
+    "Portfolio of Hristijan Mijalkov — full-stack and AI engineer building production web apps and end-to-end ML pipelines.",
   openGraph: {
-    title: "Hristijan Mijalkov — Full-stack Engineer & Data Scientist",
+    title: "Hristijan Mijalkov — Full-stack & AI Engineer",
     description:
-      "Full-stack engineer and data scientist. Angular, NestJS, Python, PySpark, AWS. Open to new opportunities.",
+      "Full-stack and AI engineer. Angular, NestJS, Python, PySpark, AWS. Open to new opportunities.",
     type: "website",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hristijan Mijalkov",
-    description: "Full-stack Engineer & Aspiring Data Scientist",
+    description: "Full-stack & AI Engineer",
   },
 };
 

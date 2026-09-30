@@ -152,7 +152,7 @@ export default function CVPage() {
           <ul className="summary">
             <li>4+ years shipping production systems across fintech and enterprise software.</li>
             <li>Founded DAWN, a bilingual (EN/MK) teaching platform for coding and economics.</li>
-            <li>Core stack: Angular · Node.js · Go · AWS · SQL · JavaScript · HTML · CSS · OpenAPI · Terraform.</li>
+            <li>Core stack: Angular · Node.js · Go · AWS · MySQL · PostgreSQL · TypeScript · Terraform.</li>
           </ul>
         </div>
 

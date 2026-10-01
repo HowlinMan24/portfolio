@@ -25,15 +25,14 @@ export const experience: ExperienceItem[] = [
     company: "Vista Point",
     location: "North Macedonia",
     period: "May 2022 – Present",
-    tech: ["Angular", "Node.js", "MySQL", "MongoDB", "Redis", "JWT", "OAuth 2.0", "Docker"],
+    tech: ["Angular", "NestJS", "Node.js", "MySQL", "MongoDB", "Redis", "JWT", "OAuth 2.0", "Docker"],
     bullets: [
-      "Built and maintained, together with the founder, a multi-tenant banking platform used by 30+ client banks, covering identity verification, cross-border wire transfers, and FX trading.",
-      "Set up and queried MongoDB to store KYC customer-profile questionnaires alongside the MySQL data.",
-      "Built a custom search system that stays in sync with the platform's main database, powering background screening (PEP and sanctions-list checks) on new customers.",
-      "Deployed and maintained the platform separately for two countries (North Macedonia and Germany), each with its own environment and configuration.",
-      "Hardened security on sensitive features (identity checks, money transfers, permissions) with OAuth 2.0 for user login, service-to-service and bank-client access, plus JWT and refresh-token rotation.",
+      "Built and maintained, together with the founder, a multi-tenant banking platform used by multiple client banks, covering identity verification, cross-border wire transfers, and FX trading.",
+      "Built KYC and wire-transfer workflows: profile approvals, document management, bulk uploads, and configurable cut-off times by time zone.",
+      "Designed webhook events for KYC status changes, signed with HMAC, and documented the public API with OpenAPI.",
+      "Hardened security with OAuth 2.0 (user login, service-to-service and bank-client access), two-factor authentication, JWT and refresh-token rotation.",
       "Fixed a peak-load performance bottleneck with Redis read-through caching and rewritten MySQL queries.",
-      "Refactored a monolithic Angular codebase into a reusable component library, cutting duplicated logic across KYC, wire-transfer, and FX trade screens; trained and mentored 6 interns.",
+      "Built features on the company website (Angular SSR): a planning calendar, email workers and EN/MK translations. Mentored interns.",
     ],
   },
   {
@@ -66,10 +65,12 @@ export const experience: ExperienceItem[] = [
     company: "Freelance",
     location: "North Macedonia",
     period: "Dec 2021 – Present",
-    tech: ["Angular", "Node.js", "HTML", "CSS", "JavaScript", "PHP", "Python", "Pandas", "SQL"],
+    tech: ["Angular", "Node.js", "Python", "FastAPI", "SAP", "PHP", "SQL"],
     bullets: [
       "Delivered 2 production websites end-to-end (solar energy provider, PVC construction company) covering requirements, UI/UX, full-stack development (HTML, CSS, JavaScript, PHP), and deployment, enabling clients with no prior web presence to generate online leads.",
       "Taught web development (Angular, Node.js, HTML/CSS/JS) and data science (Python, Pandas, SQL, ML, Deep Learning, LLMs, RAG systems) across 1-on-1 and small-group sessions, adapting curriculum to individual skill levels.",
+    
+      "Building two products independently: Close, a month-end financial close engine for course and membership businesses (Python, FastAPI), and TempChain, cold-chain monitoring for food and pharma logistics integrated with SAP (Node.js, Angular).",
     ],
   },
   {

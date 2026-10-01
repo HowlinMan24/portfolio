@@ -5,9 +5,9 @@ import SectionHeader from "./SectionHeader";
 import Marquee from "./Marquee";
 
 const paras = [
-  "Full-stack and AI engineer with 4+ years of production experience in fintech and ML — shipping a live banking platform, enterprise forecasting models, and distributed data pipelines for clients across Europe, alongside freelance web development and volunteer disaster-relief tooling on the side.",
-  "At Vista Point I engineer a multi-tenant banking SaaS platform with microservices architecture: Angular frontends, NestJS REST APIs, and MySQL/Redis backends handling KYC onboarding, cross-border wire transfers, and FX trading under compliance constraints. At Xient GmbH I build classification, regression, and time-series forecasting models alongside PySpark ETL pipelines (Lambda architecture: batch + streaming) within the SAP × Hypatos document-intelligence ecosystem, turning multi-source enterprise data into decision-ready forecasts.",
-  "Experienced designing Microservices, Multi-Tenant SaaS, Event-Driven, and Lambda architectures. Proven across Angular, Node.js, Go, FastAPI, Flask, Python, PySpark, AWS, SQL, and NoSQL. Drawn to fintech, fraud detection, and the intersection of data engineering and applied security.",
+  "Full-stack and AI engineer with 4+ years of production experience across banking, SaaS, ERP integration, CMS and AI — shipping a banking platform used by multiple client banks and on-prem AI tooling for an SAP environment, alongside freelance web development, volunteer disaster-relief tooling and a few products of my own.",
+  "At Vista Point I build and maintain a multi-tenant banking platform with Angular frontends, NestJS and Node.js services, and MySQL, MongoDB and Redis behind them, covering KYC workflows, wire transfers, webhooks and OAuth 2.0 security. At Xient GmbH I connected an on-premise SAP system to a local LLM, built Copilot Studio agents for purchasing and finance staff, and shipped a Teams dashboard, a documentation export tool and a RAG assistant. I also founded DAWN, a bilingual teaching platform with its own CMS (Go, Angular, PostgreSQL), and I'm building Close, a financial close engine, and TempChain, cold-chain monitoring on SAP.",
+  "Comfortable with microservices, multi-tenant SaaS and event-driven design. Strongest in Angular, Node.js, TypeScript, Go and Python (FastAPI), on AWS with Terraform. Drawn to products where careful data handling matters: banking, ERP and AI that keeps company data private.",
 ];
 
 export default function About() {

@@ -150,7 +150,7 @@ export default function CVPage() {
           <div className="section-title">Professional Summary</div>
           <hr className="section-rule" />
           <ul className="summary">
-            <li>4+ years shipping production systems across fintech and enterprise software.</li>
+            <li>4+ years shipping production web systems across banking, ERP, CMS, e-commerce and AI.</li>
             <li>Founded DAWN, a bilingual (EN/MK) teaching platform for coding and economics.</li>
             <li>Core stack: Angular · React · Node.js · Go · FastAPI · AWS · MySQL · PostgreSQL · TypeScript · Terraform.</li>
           </ul>

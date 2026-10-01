@@ -21,7 +21,7 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    role: "Senior Full-stack Developer",
+    role: "Senior Full Stack Engineer",
     company: "Vista Point",
     location: "North Macedonia",
     period: "May 2022 – Present",
@@ -61,7 +61,7 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    role: "Full-stack Developer & Tutor",
+    role: "Full Stack Engineer & Tutor",
     company: "Freelance",
     location: "North Macedonia",
     period: "Sep 2021 – Present",

@@ -64,7 +64,7 @@ export const experience: ExperienceItem[] = [
     role: "Full-stack Developer & Tutor",
     company: "Freelance",
     location: "North Macedonia",
-    period: "Dec 2021 – Present",
+    period: "Sep 2021 – Present",
     tech: ["Angular", "Node.js", "Python", "FastAPI", "SAP", "PHP", "SQL"],
     bullets: [
       "Delivered 2 production websites end-to-end (solar energy provider, PVC construction company) covering requirements, UI/UX, full-stack development (HTML, CSS, JavaScript, PHP), and deployment, enabling clients with no prior web presence to generate online leads.",

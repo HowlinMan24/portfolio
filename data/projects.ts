@@ -15,6 +15,16 @@ export interface Project {
 export const projects: Project[] = [
   // ── Manual entries ──────────────────────────────────────────────────────────
   {
+    name: "ColdLatch",
+    description:
+      "Cold-chain monitoring for pharma and food distributors. Turns a confirmed temperature excursion into a signed batch block in the ERP, with a hash-chained audit log, PDF excursion reports and alerts. SAP S/4HANA integration on standard OData services. Multi-tenant, in production on AWS, with a public live demo.",
+    category: "Web",
+    tech: ["NestJS", "Angular", "MySQL", "MQTT", "SAP S/4HANA", "AWS", "Docker", "Terraform"],
+    demoUrl: "https://coldlatch.com/login?demo=1",
+    updatedAt: "2026-10-11",
+    highlight: true,
+  },
+  {
     name: "Calendar SaaS App",
     description:
       "Google Calendar–style app for managing events across multiple calendars. Reusable month/week/day views, event dialogs, and filters. Dockerized with Nginx config for dev/prod.",

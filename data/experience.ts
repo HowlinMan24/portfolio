@@ -10,6 +10,20 @@ export interface ExperienceItem {
 export const experience: ExperienceItem[] = [
   {
     role: "Founder",
+    company: "ColdLatch",
+    location: "North Macedonia (Remote)",
+    period: "2026 – Present",
+    tech: ["NestJS", "Angular", "MySQL", "MQTT", "SAP S/4HANA", "OData", "AWS", "Docker", "Terraform"],
+    bullets: [
+      "Founded and built ColdLatch (coldlatch.com), cold-chain monitoring software for pharma and food distributors. It turns a confirmed temperature excursion into a signed batch block in the ERP, with a tamper-evident audit log.",
+      "Designed and built the multi-tenant web application: NestJS backend, Angular 21 portal, MySQL, and MQTT and HTTPS intake for temperature loggers.",
+      "Built the SAP S/4HANA integration on SAP's standard OData services (stock lookup and material documents), and checked the read path against SAP's own sandbox system.",
+      "Implemented signed decisions (password and reason), a hash-chained audit log, PDF excursion reports, and notifications by email, Slack, Teams and webhooks.",
+      "Runs in production on AWS with Docker and Terraform, with a public live demo and about 1,200 automated tests across the backend and portal. Available in five languages, with a public integration API for other ERP systems.",
+    ],
+  },
+  {
+    role: "Founder",
     company: "DAWN",
     location: "North Macedonia (Remote)",
     period: "Jul 2026 – Present",
@@ -65,12 +79,11 @@ export const experience: ExperienceItem[] = [
     company: "Freelance",
     location: "North Macedonia",
     period: "Sep 2021 – Present",
-    tech: ["Angular", "Node.js", "Python", "FastAPI", "SAP", "PHP", "SQL"],
+    tech: ["Angular", "Node.js", "Python", "FastAPI", "PHP", "SQL"],
     bullets: [
       "Delivered 2 production websites end-to-end (solar energy provider, PVC construction company) covering requirements, UI/UX, full-stack development (HTML, CSS, JavaScript, PHP), and deployment, enabling clients with no prior web presence to generate online leads.",
       "Taught web development (Angular, Node.js, HTML/CSS/JS) and data science (Python, Pandas, SQL, ML, Deep Learning, LLMs, RAG systems) across 1-on-1 and small-group sessions, adapting curriculum to individual skill levels.",
-    
-      "Building two products independently: Close, a month-end financial close engine for course and membership businesses (Python, FastAPI), and TempChain, cold-chain monitoring for food and pharma logistics integrated with SAP (Node.js, Angular).",
+      "Building Close independently, a month-end financial close engine for course and membership businesses (Python, FastAPI).",
     ],
   },
   {

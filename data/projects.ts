@@ -15,6 +15,17 @@ export interface Project {
 export const projects: Project[] = [
   // ── Manual entries ──────────────────────────────────────────────────────────
   {
+    name: "Redproof",
+    description:
+      "Launch and security checks for apps built with AI tools like Lovable, Bolt and Cursor. Reads the code without running it (44 checks, including a Supabase row level security access map), adds a Claude-based AI review on paid scans, and explains every finding in plain words with a fix prompt. Live, with a free score.",
+    category: "Web",
+    secondaryTags: ["Security", "AI"],
+    tech: ["NestJS", "Angular", "MySQL", "Claude API", "AWS", "Docker", "Terraform"],
+    demoUrl: "https://redproof.dev",
+    updatedAt: "2026-10-26",
+    highlight: true,
+  },
+  {
     name: "ColdLatch",
     description:
       "Cold-chain monitoring for pharma and food distributors. Turns a confirmed temperature excursion into a signed batch block in the ERP, with a hash-chained audit log, PDF excursion reports and alerts. SAP S/4HANA integration on standard OData services. Multi-tenant, in production on AWS, with a public live demo.",

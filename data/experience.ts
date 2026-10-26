@@ -10,6 +10,20 @@ export interface ExperienceItem {
 export const experience: ExperienceItem[] = [
   {
     role: "Founder",
+    company: "Redproof",
+    location: "North Macedonia (Remote)",
+    period: "Oct 2026 – Present",
+    tech: ["NestJS", "Angular", "MySQL", "Claude API", "Supabase", "AWS", "Docker", "Terraform"],
+    bullets: [
+      "Founded and built Redproof (redproof.dev), launch and security checks for apps built with AI coding tools such as Lovable, Bolt and Cursor. Paste a GitHub repo and get a free launch score in about a minute, with a fix prompt for every finding.",
+      "Built the scan engine: 44 checks that read code without running it, including a table-by-table map of who can read and change data under Supabase row level security. Sandboxed, with size and zip-bomb limits.",
+      "Added an AI review with the Claude API (cached prompt passes plus a verifier pass) on paid scans, at about $0.25 per review in testing, with daily and monthly budget caps.",
+      "Measured quality on 34 hand-labelled public repositories and a golden test suite, raising rule precision from 71% to 95%.",
+      "Runs on AWS with Docker, Caddy and Terraform: Angular SSR with prerendered SEO pages, payment webhooks, email through Amazon SES and a strict Content Security Policy.",
+    ],
+  },
+  {
+    role: "Founder",
     company: "ColdLatch",
     location: "North Macedonia (Remote)",
     period: "2026 – Present",
@@ -39,12 +53,13 @@ export const experience: ExperienceItem[] = [
     company: "Vista Point",
     location: "North Macedonia",
     period: "May 2022 – Present",
-    tech: ["Angular", "NestJS", "Node.js", "MySQL", "MongoDB", "Redis", "JWT", "OAuth 2.0", "Docker"],
+    tech: ["Angular", "NestJS", "Node.js", ".NET", "Contentful", "Azure", "MySQL", "MongoDB", "Redis", "JWT", "OAuth 2.0", "Docker"],
     bullets: [
       "Built and maintained, together with the founder, a multi-tenant banking platform used by multiple client banks, covering identity verification, cross-border wire transfers, and FX trading.",
       "Built KYC and wire-transfer workflows: profile approvals, document management, bulk uploads, and configurable cut-off times by time zone.",
       "Designed webhook events for KYC status changes, signed with HMAC, and documented the public API with OpenAPI.",
       "Hardened security with OAuth 2.0 (user login, service-to-service and bank-client access), two-factor authentication, JWT and refresh-token rotation.",
+      "Migrated client websites from Adobe Experience Manager to Contentful with .NET: content import, APIs, page rendering, authentication, and hosting on Azure.",
       "Fixed a peak-load performance bottleneck with Redis read-through caching and rewritten MySQL queries.",
       "Built features on the company website (Angular SSR): a planning calendar, email workers and EN/MK translations. Mentored interns.",
     ],

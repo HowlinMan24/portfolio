@@ -11,9 +11,9 @@ export const skillGroups: SkillGroup[] = [
   {
     label: "Web & APIs",
     items: [
-      "Spring Boot", "Angular", "NestJS", "Node.js", ".NET",
+      "Spring Boot", "Angular", "RxJS", "NestJS", "Node.js", ".NET",
       "FastAPI", "Flask",
-      "HTML", "CSS", "Tailwind CSS", "REST APIs", "OpenAPI", "WebSockets", "Nginx", "SEO",
+      "HTML", "CSS", "Accessibility (WCAG)", "Tailwind CSS", "REST APIs", "OpenAPI", "WebSockets", "Nginx", "SEO",
     ],
   },
   {

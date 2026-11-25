@@ -36,3 +36,10 @@
 - Data engineering: github.com/HowlinMan24/sap-llm-connector; Python extraction from SAP S/4HANA and BW.
 - Big data Spark / Kafka / Flink (small jobs only; describe by function, do not claim production clusters): diabetes-ml-streaming (streaming ML pipeline), spark-als-movielens (Spark recommender), flink-streaming.
 - ML: rag-anything-eval; scikit-learn and Pandas; not deep-learning research.
+
+## Upwork portfolio highlights (suggest up to 3 per job, by title)
+- Redproof: Supabase, Lovable/AI-builder apps, security, AI integration, NestJS + Angular.
+- ColdLatch: NestJS backend, IoT/MQTT, SAP, Terraform/AWS, multi-tenant SaaS.
+- Dawn: Angular front end, Go, PostgreSQL, Docker, AWS.
+- RxRadar: Node/NestJS + Angular full stack, MySQL, Docker.
+- Portfolio website: React/Next.js, Tailwind, Vercel (small front-end jobs only).

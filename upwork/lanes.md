@@ -13,6 +13,7 @@
 - Answer screening questions with a direct answer first, then one line of proof. No "I think", "I believe", "I can try", "hopefully", "might", "happy to", "would love to".
 - Never use the words student, university, school, coursework, thesis, demo, trial, toy, practice, learning, side project, hobby, "I'm new", "first job", "building my profile". Present every project by what it does and what it is built with (e.g. "an LLM grading platform: Angular, Spring Boot, MySQL, model fallback").
 - Never undersell: no "mostly X", "my main stack is Y so I'm weaker at Z", "not my strongest", apologies or disclaimers. Lead with the strongest matching proof.
+- Small fixed budgets: if the client's price is far below the work in the post, the price covers a clearly named first milestone (e.g. "$20 covers the first workflow: X"), and the rest is a second milestone. Never promise the full scope for a tiny fixed price.
 - Stay true: do not invent clients, production users, numbers or years. If the post requires something he has never done, skip the claim and pitch the closest real work confidently; do not draw attention to the gap.
 - Repo names that contain "Student" or "demo": link them, but describe them only by function.
 

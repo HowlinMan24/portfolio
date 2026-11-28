@@ -2,15 +2,26 @@
 
 ## Draft rules
 - First 150-200 characters: THEIR problem, quoting one detail from the post. Never open with "Hi I'm", years, "I'd love to help" or the rate.
-- Sentence 2: what they will have when done.
-- A 2-3 step plan. ONE matching proof link. Answer every screening question.
-- End with one easy question about their setup.
-- Under ~150 words (big jobs under ~250). No em dashes, plain hyphens only.
+- NO FIXED SKELETON. Clients who read several of his proposals must not see the same shape. Pick the shape from the post:
+  - Post asks questions: answer them in their order, nothing else.
+  - Small fix: 3-4 plain sentences (what is likely wrong, what he will do, one proof, one question).
+  - Bigger build: say what they will have when done, then a short plan ONLY if the post asks how he would approach it.
+  - Never use stock section labels ("What you get:", "Plan:", "How I would run it:") and never a numbered 1-2-3 plan by default.
+- ONE proof, chosen for THIS job. Redproof only for security, Supabase/AI-builder or full-stack SaaS jobs. Otherwise pick ColdLatch, Dawn, the banking platform, the SAP/LLM work or a repo from the lanes below. Never list several projects.
+- End with one easy, specific question about their setup.
+- Small jobs under ~120 words, big jobs under ~200. No em dashes, plain hyphens only.
 - If the post bans AI-written answers, give 3-5 bullet points for him to write instead.
+
+## Voice: sounds like a person, competent and friendly
+- Plain spoken English: short sentences, contractions (I'm, I've, that's), everyday words. Read it aloud: if it sounds like a brochure, rewrite it.
+- One concrete detail only someone who did the work would know (e.g. "a view or SECURITY DEFINER function that skips RLS"), instead of adjectives like "robust", "seamless", "scalable", "production-ready".
+- No stock lines: "That is what I will build for you", "Here's how I'd approach it", "I'd love to", "I'm confident that", "Look no further", "Let's discuss".
+- Vary openings and endings between drafts. Never start two drafts in a batch the same way.
 
 ## Tone: senior professional, firm and confident
 - Write like an engineer who has done this before and is sure of the plan. State things directly: "I will", "You get", "This takes 2 days". Give a firm price and timeline when the post allows it.
-- Answer screening questions with a direct answer first, then one line of proof. No "I think", "I believe", "I can try", "hopefully", "might", "happy to", "would love to".
+- Answer screening questions with a direct answer first, then one line of proof. No hedging: "I think", "I believe", "I can try", "hopefully", "might", "would love to".
+- Gaps: never volunteer them. If a screening question asks about a tool he has not used, answer in ONE short line ("Not Xero yet; the closest is SAP S/4HANA, where I...") and move on. Never an "upfront" paragraph, never his total years next to a gap.
 - Never use the words student, university, school, coursework, thesis, demo, trial, toy, practice, learning, side project, hobby, "I'm new", "first job", "building my profile". Present every project by what it does and what it is built with (e.g. "an LLM grading platform: Angular, Spring Boot, MySQL, model fallback").
 - Never undersell: no "mostly X", "my main stack is Y so I'm weaker at Z", "not my strongest", apologies or disclaimers. Lead with the strongest matching proof.
 - Small fixed budgets: if the client's price is far below the work in the post, the price covers a clearly named first milestone (e.g. "$20 covers the first workflow: X"), and the rest is a second milestone. Never promise the full scope for a tiny fixed price.
